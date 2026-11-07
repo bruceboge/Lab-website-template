@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DeKUT Integrated Circuit Engineering Lab
 
-## Getting Started
+An App Router website for the DeKUT Integrated Circuit Engineering Lab.
 
-First, run the development server:
+## Project structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- `src/app/` contains route files, route-specific `_components/`, metadata routes, and global styles.
+- `src/components/` contains shared components as flat files.
+- `src/data/` contains the site’s project, event, and inventory records.
+- `src/lib/` contains schemas, site metadata constants, email delivery, and request handlers.
+- `src/types/` contains shared TypeScript types.
+- `public/` contains static visual assets and self-hosted fonts.
+
+## Contact and loan request delivery
+
+Contact, donation, partnership, and inventory loan requests are sent through the Resend email API when the following server-side environment variables are configured:
+
+```text
+RESEND_API_KEY=
+RESEND_FROM_EMAIL=
+CONTACT_TO_EMAIL=
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Use a sender address verified with the email provider. Keep these values in the deployment environment or an untracked local `.env.local`; never commit credentials. When delivery is not configured or the provider rejects a message, the API returns an error instead of reporting a false success. Loan requests are emailed for lab review; the generated receipt is not a confirmed reservation.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The inventory counts, availability, people, project results, events, and publications are draft content and must be verified by the lab before public launch. The inventory page labels its quantities as sample data.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Development
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Run `npm run dev` to start the local server, `npx tsc --noEmit` for the TypeScript check, `npm run lint` for ESLint, and `npm run build` for a production build.

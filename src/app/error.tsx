@@ -1,0 +1,2 @@
+"use client";
+export default function ErrorPage({ reset }: { error: Error & { digest?: string }; reset: () => void }) { return <main id="main" tabIndex={-1} className="section"><div className="container"><span className="eyebrow">Something went wrong</span><h1>This page could not load.</h1><p>Please try again. If the problem continues, contact the lab.</p><button className="button" onClick={() => reset()}>Try again</button></div></main>; }
