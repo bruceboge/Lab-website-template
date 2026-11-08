@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LabVisual } from "@/components/LabVisual";
+import { DraftNotice } from "@/components/DraftNotice";
 
 export const metadata: Metadata = {
   title: "Tools, EDA Software & Laboratory Facilities",
   description:
-    "Explore the electronic design automation (EDA) software, simulation tools, bench instruments, and open PDKs supporting research and education at DeKUT CDED.",
+    "Explore the electronic design automation (EDA) software, simulation tools, and laboratory facilities supporting research and education at DICEL, DeKUT.",
 };
 
 type ToolCategory = {
@@ -110,6 +111,13 @@ export default function ToolsPage() {
           </p>
         </div>
       </header>
+
+      <div className="container draft-notice-wrap">
+        <DraftNotice>
+          Tool licenses, installed versions, hardware models, specifications,
+          quantities, and facility descriptions need confirmation from the lab.
+        </DraftNotice>
+      </div>
 
       <section className="section tools-section">
         <div className="container">

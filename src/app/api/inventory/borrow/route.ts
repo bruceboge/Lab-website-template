@@ -98,7 +98,7 @@ export async function POST(request: Request) {
       course: data.course,
       quantity: data.quantity,
       dueDate: dueDateFormatted,
-      pickupLocation: "Origin Labs · CDED Ground Floor, DeKUT Nyeri Campus",
+      pickupLocation: "DICEL Lab, Dedan Kimathi University of Technology, Nyeri",
     };
 
     return Response.json(

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, FormEvent } from "react";
+import { useEffect, useRef, useState, FormEvent } from "react";
 import { type InventoryItem, TEMPLATE_COURSES } from "@/data/inventory";
 
 export type LoanReceipt = {
@@ -24,16 +24,62 @@ export function BorrowModal({
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [receipt, setReceipt] = useState<LoanReceipt | null>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
 
   // Default course selection matches item's primary course or first course
   const defaultCourse = item.courses[0] ?? TEMPLATE_COURSES[0];
 
   useEffect(() => {
+    const modal = modalRef.current;
+    const previouslyFocused =
+      document.activeElement instanceof HTMLElement
+        ? document.activeElement
+        : null;
+    const focusableElements = () =>
+      Array.from(
+        modal?.querySelectorAll<HTMLElement>(
+          'a[href], button:not(:disabled), input:not(:disabled), select:not(:disabled), textarea:not(:disabled), [tabindex]:not([tabindex="-1"])',
+        ) ?? [],
+      );
+
+    focusableElements()[0]?.focus();
+
     function handleKeyDown(e: KeyboardEvent) {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") {
+        onClose();
+        return;
+      }
+
+      if (e.key !== "Tab") {
+        return;
+      }
+
+      const focusable = focusableElements();
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (!first || !last) {
+        return;
+      }
+
+      if (e.shiftKey && (document.activeElement === first || !modal?.contains(document.activeElement))) {
+        e.preventDefault();
+        last.focus();
+      } else if (
+        !e.shiftKey &&
+        (document.activeElement === last || !modal?.contains(document.activeElement))
+      ) {
+        e.preventDefault();
+        first.focus();
+      }
     }
+
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      if (previouslyFocused?.isConnected) {
+        previouslyFocused.focus();
+      }
+    };
   }, [onClose]);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -77,6 +123,7 @@ export function BorrowModal({
   return (
     <div
       className="modal-backdrop"
+      ref={modalRef}
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
@@ -212,7 +259,7 @@ export function BorrowModal({
               <label className="checkbox-label">
                 <input type="checkbox" required />
                 <span>
-                  I agree to adhere to the <b>DeKUT CDED Laboratory Policy</b>, return this equipment in clean working condition by the due date, and report any component malfunctions immediately.
+                  I agree to follow the loan, use, safety, and return requirements provided by DICEL lab staff.
                 </span>
               </label>
 
@@ -236,7 +283,7 @@ export function BorrowModal({
             </form>
           </>
         ) : (
-          <div className="receipt-view">
+          <div className="receipt-view" role="status" aria-live="polite">
             <div className="receipt-icon">✓</div>
             <span className="eyebrow">Request Submitted · Pending Lab Review</span>
             <h2>Equipment Request Receipt</h2>
@@ -287,4 +334,3 @@ export function BorrowModal({
     </div>
   );
 }
-

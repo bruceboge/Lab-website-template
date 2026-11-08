@@ -9,22 +9,18 @@ export const metadata: Metadata = {
 
 const supportPillars = [
   {
-    icon: "🔬",
     title: "Equipment & Hardware Donations",
     desc: "Donate development boards (FPGA kits, microcontrollers, sensor modules), bench oscilloscopes, or cleanroom consumables to expand practical access for undergraduate engineering students.",
   },
   {
-    icon: "⚡",
     title: "Silicon Shuttle & Tapeout Funding",
     desc: "Sponsor student multi-project wafer (MPW) silicon fabrication runs on open-source PDKs (SkyWater 130nm, GF180MCU) to get real student-designed microchips manufactured.",
   },
   {
-    icon: "🎓",
     title: "Research Fellowships & Scholarships",
     desc: "Fund postgraduate research stipends and undergraduate thesis awards in VLSI circuit design, digital verification, and low-power analog engineering.",
   },
   {
-    icon: "🤝",
     title: "Industry Mentorship & Co-Design",
     desc: "Engage your engineering team as technical mentors, co-supervise applied industry capstone projects, and host student internships in electronics manufacturing.",
   },
@@ -48,7 +44,7 @@ export default function SupportPage() {
               </li>
             </ol>
           </nav>
-          <span className="eyebrow">Partnerships & Philanthropy · CDED DeKUT</span>
+          <span className="eyebrow">Partnerships & Support · DICEL DeKUT</span>
           <h1>Support Integrated Circuit Engineering</h1>
           <p>
             Help accelerate semiconductor talent, open-source silicon innovation, and hands-on microelectronics education in Kenya and East Africa.
@@ -68,9 +64,9 @@ export default function SupportPage() {
           </div>
 
           <div className="grid-2" style={{ gap: 24 }}>
-            {supportPillars.map((p) => (
+            {supportPillars.map((p, index) => (
               <article className="card" key={p.title} style={{ padding: 30 }}>
-                <div style={{ fontSize: "32px", marginBottom: 12 }}>{p.icon}</div>
+                <span className="eyebrow">{String(index + 1).padStart(2, "0")}</span>
                 <h3 style={{ fontSize: "21px", margin: "0 0 10px", color: "var(--text)" }}>
                   {p.title}
                 </h3>
@@ -103,12 +99,12 @@ export default function SupportPage() {
           </div>
 
           <div className="support-contact-card">
-            <span className="eyebrow">CDED Institutional Contact</span>
+            <span className="eyebrow">DICEL Contact</span>
             <h3>DeKUT Integrated Circuit Engineering Lab</h3>
             <p>
               <b>Dedan Kimathi University of Technology</b>
               <br />
-              Centre for Development of Electronic Devices (CDED)
+              DICEL · Integrated Circuit Engineering Lab
               <br />
               Private Bag - 10143, Dedan Kimathi
               <br />

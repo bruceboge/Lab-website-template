@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import Script from "next/script";
 
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -20,8 +21,8 @@ const mono = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} · CDED DeKUT`,
-    template: `%s · ${SITE_NAME}`,
+    default: `${SITE_NAME} · DeKUT`,
+    template: `%s · DICEL`,
   },
   description: SITE_DESCRIPTION,
   keywords: [
@@ -56,8 +57,17 @@ export default function RootLayout({
       lang="en"
       className={`${sans.variable} ${mono.variable}`}
       data-scroll-behavior="smooth"
+      data-theme="light"
+      suppressHydrationWarning
     >
       <body>
+        <Script
+          id="dicel-theme-bootstrap"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem("dicel-theme");document.documentElement.dataset.theme=t==="light"||t==="dark"?t:matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.style.colorScheme=document.documentElement.dataset.theme}catch{document.documentElement.dataset.theme=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}`,
+          }}
+        />
         <a className="skip" href="#main">
           Skip to content
         </a>

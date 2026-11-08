@@ -69,10 +69,10 @@ export default function EventsPage() {
                   </div>
                   <h3>{event.title}</h3>
                   <p style={{ fontSize: "13px", color: "var(--gold)", fontWeight: 600, margin: "4px 0 10px" }}>
-                    📅 {event.date} · {event.time}
+                    Date & time: {event.date} · {event.time}
                   </p>
                   <p style={{ fontSize: "12.5px", color: "var(--muted)", marginBottom: 12 }}>
-                    📍 {event.venue}
+                    Venue: {event.venue}
                   </p>
                   <p style={{ fontSize: "13.5px", lineHeight: "1.6" }}>{event.summary}</p>
                   <span className="card-foot" style={{ marginTop: "auto", paddingTop: 16 }}>
@@ -109,7 +109,7 @@ export default function EventsPage() {
                   </div>
                   <h3>{event.title}</h3>
                   <p style={{ fontSize: "13px", color: "var(--muted)", margin: "4px 0 10px" }}>
-                    📅 {event.date}
+                    Date: {event.date}
                   </p>
                   <p style={{ fontSize: "13.5px", lineHeight: "1.6" }}>{event.summary}</p>
                   <span className="card-foot" style={{ marginTop: "auto", paddingTop: 16 }}>

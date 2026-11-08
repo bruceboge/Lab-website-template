@@ -4,9 +4,9 @@ import { EnquiryForm } from "@/app/contact/_components/EnquiryForm";
 import { LabVisual } from "@/components/LabVisual";
 
 export const metadata: Metadata = {
-  title: "Contact the Lab · CDED DeKUT",
+  title: "Contact DICEL · DeKUT",
   description:
-    "Reach the Centre for Development of Electronic Devices (CDED) at Dedan Kimathi University of Technology regarding research, courses, equipment loans, or collaboration.",
+    "Contact DICEL at Dedan Kimathi University of Technology about research, learning opportunities, equipment, or collaboration.",
 };
 
 export default function ContactPage() {
@@ -27,7 +27,7 @@ export default function ContactPage() {
               </li>
             </ol>
           </nav>
-          <span className="eyebrow">Connect with Us · Centre for Development of Electronic Devices</span>
+          <span className="eyebrow">Contact DICEL · DeKUT</span>
           <h1>Contact the Lab</h1>
           <p>
             Have a question about our IC research projects, course prerequisites, hardware inventory loans, or industry partnerships? Send our team a message.
@@ -57,7 +57,7 @@ export default function ContactPage() {
 
             <a className="contact-detail" href="tel:+254722956166">
               <span className="contact-symbol" aria-hidden="true">
-                ☎
+                Phone
               </span>
               <span>
                 <small>Telephone / WhatsApp</small>
@@ -70,7 +70,7 @@ export default function ContactPage() {
               <p style={{ margin: "6px 0 10px" }}>
                 <b>Dedan Kimathi University of Technology (DeKUT)</b>
                 <br />
-                Centre for Development of Electronic Devices (CDED)
+                DICEL · Integrated Circuit Engineering Lab
                 <br />
                 Origin Labs Building, Ground Floor
                 <br />

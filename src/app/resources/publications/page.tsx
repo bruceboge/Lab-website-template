@@ -23,7 +23,7 @@ const publications: Publication[] = [
   {
     title: "Design and Verification of a 32-Bit Educational RISC-V Core on Open-Source FPGA Toolchains",
     authors: "K. Mwai, F. Muthoni, J. Ndichu",
-    venue: "DeKUT CDED Technical Report Series, Vol. 4, No. 2",
+    venue: "DICEL Technical Report Series, Vol. 4, No. 2",
     year: "2026",
     type: "Technical Report",
     abstract: "Documents the architecture, pipeline hazard resolution, and cycle-accurate verification of an RV32I soft-core synthesized using Yosys and nextpnr targeting Artix-7 and Gowin FPGAs.",
@@ -43,7 +43,7 @@ const publications: Publication[] = [
   {
     title: "Comparative Layout and Noise Margin Analysis of 6T SRAM Bitcells in 130nm Open PDKs",
     authors: "B. Wanjiku, J. Ndichu",
-    venue: "DeKUT CDED Microelectronics Research Notes",
+    venue: "DICEL Microelectronics Research Notes",
     year: "2025",
     type: "Technical Report",
     abstract: "Evaluates read/write noise margins and lithographic design-rule compliance for high-density 6T memory arrays across process, voltage, and temperature corners using KLayout and Magic.",
@@ -73,7 +73,7 @@ const publications: Publication[] = [
   {
     title: "On-Chip PVT Variation Sensor Architecture Using Multi-Stage Ring Oscillators",
     authors: "D. Ochieng, K. Mwai",
-    venue: "DeKUT CDED Student Tapeout Documentation Series",
+    venue: "DICEL Student Tapeout Documentation Series",
     year: "2024",
     type: "Technical Report",
     abstract: "Details layout optimization and frequency counter integration for post-silicon characterization of inter-die process shifts submitted to educational multi-project wafer shuttles.",

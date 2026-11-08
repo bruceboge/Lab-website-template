@@ -3,22 +3,22 @@ import Image from "next/image";
 const visuals = {
   digital: {
     src: "/visuals/digital-design.svg",
-    alt: "Digital IC architecture and logic synthesis layout",
+    alt: "Illustration of an integrated circuit package with digital signal-routing traces",
     tag: "Digital IC Design",
   },
   analog: {
     src: "/visuals/analog-interface.svg",
-    alt: "Analog front-end interface and signal conditioning circuit",
+    alt: "Illustration of an analog front-end and signal-conditioning circuit",
     tag: "Analog & Mixed-Signal",
   },
   layout: {
     src: "/visuals/physical-design.svg",
-    alt: "GDSII integrated circuit physical layout and routing",
+    alt: "Illustration of an integrated-circuit physical layout and routing",
     tag: "Physical Design",
   },
   laboratory: {
     src: "/visuals/laboratory.svg",
-    alt: "DeKUT CDED electronics and microchip characterization laboratory",
+    alt: "Illustrative placeholder for an electronics laboratory workspace, not a photograph of the DeKUT facility",
     tag: "Research Facility",
   },
 } as const;
@@ -27,10 +27,12 @@ export function LabVisual({
   kind,
   className = "",
   showBadge = false,
+  eager = false,
 }: {
   kind: keyof typeof visuals;
   className?: string;
   showBadge?: boolean;
+  eager?: boolean;
 }) {
   const visual = visuals[kind];
   return (
@@ -40,6 +42,7 @@ export function LabVisual({
         alt={visual.alt}
         width={1200}
         height={675}
+        loading={eager ? "eager" : undefined}
         sizes="(max-width: 760px) 100vw, (max-width: 1200px) 50vw, 380px"
       />
       {showBadge && <span className="image-label">{visual.tag}</span>}

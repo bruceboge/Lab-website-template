@@ -28,7 +28,7 @@ const designStages: DesignStage[] = [
     tools: "Requirements documents, system models and architecture trade-off studies",
     image: "/visuals/digital-design.svg",
     imageAlt: "Functional specification and requirement partitioning diagram",
-    caption: "Requirement matrices define target frequency, dynamic power limits, and silicon area budgets.",
+    caption: "A requirements matrix records targets for timing, power, area, and reliability.",
   },
   {
     id: "architecture",
@@ -43,7 +43,7 @@ const designStages: DesignStage[] = [
     tools: "Block diagrams, Python or MATLAB models, SPICE and architectural simulation",
     image: "/visuals/analog-interface.svg",
     imageAlt: "Analog interface and architectural block diagram",
-    caption: "Block-level partitioning separates sensitive analog interfaces from high-speed digital buses.",
+    caption: "Block diagrams show interfaces between analog, digital, memory, and system components.",
   },
   {
     id: "rtl",
@@ -58,7 +58,7 @@ const designStages: DesignStage[] = [
     tools: "Verilog/SystemVerilog, VHDL, schematic capture and version control",
     image: "/visuals/digital-design.svg",
     imageAlt: "Digital RTL logic representation and schematic capture",
-    caption: "Hardware description language (HDL) logic representation captured for synthesizable standard-cell flows.",
+    caption: "RTL and schematics capture implementation intent for simulation and synthesis.",
   },
   {
     id: "verification",
@@ -73,7 +73,7 @@ const designStages: DesignStage[] = [
     tools: "Icarus Verilog, Verilator, GTKWave, SPICE and formal verification tools",
     image: "/visuals/digital-design.svg",
     imageAlt: "Logic simulation waveform and testbench verification",
-    caption: "Cycle-accurate simulation validates state machines, bus arbiters, and boundary timing constraints.",
+    caption: "Simulation tests defined behaviour, edge cases, and timing assumptions before implementation.",
   },
   {
     id: "synthesis",
@@ -88,7 +88,7 @@ const designStages: DesignStage[] = [
     tools: "Yosys or commercial synthesis tools; standard-cell libraries and test tools",
     image: "/visuals/digital-design.svg",
     imageAlt: "Gate-level netlist synthesis and standard cell mapping",
-    caption: "Automated synthesis maps behavioral Verilog into discrete NAND, NOR, and flip-flop foundry standard cells.",
+    caption: "Synthesis maps digital logic to cells from a selected process library.",
   },
   {
     id: "physical-design",
@@ -103,7 +103,7 @@ const designStages: DesignStage[] = [
     tools: "OpenROAD, OpenLane, KLayout, Magic and foundry process design kits",
     image: "/visuals/physical-design.svg",
     imageAlt: "Integrated-circuit physical layout and metal routing",
-    caption: "Floorplanning, clock tree synthesis, and detailed multi-layer metal routing in OpenROAD.",
+    caption: "Floorplanning, clock-tree synthesis, and routing turn a logical design into physical geometry.",
   },
   {
     id: "signoff",
@@ -118,7 +118,7 @@ const designStages: DesignStage[] = [
     tools: "Static timing analysis, DRC/LVS tools, KLayout, Magic and Netgen",
     image: "/visuals/physical-design.svg",
     imageAlt: "Signoff layout verification and DRC/LVS clean tape-out stream",
-    caption: "Final signoff confirms 100% DRC/LVS cleanliness before generating GDSII/OASIS tape-out data.",
+    caption: "Design-rule and layout-versus-schematic checks help assess a layout before manufacturing handoff.",
   },
   {
     id: "fabrication",
@@ -133,7 +133,7 @@ const designStages: DesignStage[] = [
     tools: "Foundry process equipment, optical microscopy and electron microscopy",
     image: "/visuals/physical-design.svg",
     imageAlt: "Silicon wafer manufacturing and photolithographic die layers",
-    caption: "Photolithography, ion implantation, and chemical vapor deposition form transistors layer by layer.",
+    caption: "Fabrication uses multiple process steps to form devices and interconnects; details vary by foundry.",
   },
   {
     id: "packaging-test",
@@ -148,7 +148,7 @@ const designStages: DesignStage[] = [
     tools: "Evaluation boards, oscilloscopes, logic analysers, power supplies and test software",
     image: "/visuals/laboratory.svg",
     imageAlt: "Silicon bring-up bench at DeKUT Origin Labs",
-    caption: "Physical chip bring-up at Origin Labs using high-speed oscilloscopes, logic probes, and test vectors.",
+    caption: "Test equipment helps evaluate a packaged device against its design requirements.",
   },
 ];
 

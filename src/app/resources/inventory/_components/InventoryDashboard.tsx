@@ -63,7 +63,6 @@ export function InventoryDashboard() {
       {/* Search and Filter Controls */}
       <div className="inventory-controls">
         <div className="search-wrap">
-          <span className="search-icon" aria-hidden="true">🔍</span>
           <input
             type="search"
             className="inventory-search"
@@ -132,7 +131,7 @@ export function InventoryDashboard() {
       </nav>
 
       {/* Inventory Status Bar */}
-      <div className="inventory-status-bar">
+      <div className="inventory-status-bar" role="status" aria-live="polite">
         <span>
           Showing <b>{filteredItems.length}</b> of {INVENTORY_ITEMS.length} items
           {selectedCourse !== "all" && ` for "${selectedCourse}"`}
@@ -155,7 +154,7 @@ export function InventoryDashboard() {
                   </span>
                 ) : (
                   <span className="status-badge status-lab">
-                    ⚙ Bench Use Only
+                    Bench Use Only
                   </span>
                 )}
               </div>
@@ -235,4 +234,3 @@ export function InventoryDashboard() {
     </div>
   );
 }
-

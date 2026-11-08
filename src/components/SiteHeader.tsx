@@ -2,12 +2,14 @@ import Link from "next/link";
 import LabBrand from "@/components/LabBrand";
 import MobileNavigation from "@/components/MobileNavigation";
 import PrimaryNavigation from "@/components/PrimaryNavigation";
+import SiteSearch from "@/components/SiteSearch";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function SiteHeader() {
   return (
     <header className="site-header">
       <div className="utility-bar">
-        <span>Research · Design · Education</span>
+        
         <span className="utility-institution">
           Dedan Kimathi University of Technology · Nyeri, Kenya
         </span>
@@ -18,6 +20,8 @@ export default function SiteHeader() {
       <div className="nav-wrap">
         <LabBrand />
         <PrimaryNavigation />
+        <SiteSearch />
+        <ThemeToggle />
         <MobileNavigation />
       </div>
     </header>

@@ -4,7 +4,7 @@ import { LabVisual } from "@/components/LabVisual";
 import { DraftNotice } from "@/components/DraftNotice";
 
 export const metadata: Metadata = {
-  title: "About the Lab · CDED DeKUT",
+  title: "About DICEL · DeKUT",
   description:
     "Learn about the Integrated Circuit Engineering Lab at Dedan Kimathi University of Technology, its mission, history, facilities, and open-source semiconductor research.",
 };
@@ -35,8 +35,8 @@ const focusAreas = [
 const milestones = [
   {
     year: "2022",
-    title: "Inception & CDED Foundation",
-    description: "Establishment of the microelectronics focus within DeKUT School of Engineering; installation of initial FPGA workstations and open EDA design toolchains.",
+    title: "DICEL established",
+    description: "The lab's initial microelectronics work, facilities, and design tools.",
   },
   {
     year: "2023",
@@ -92,7 +92,7 @@ export default function AboutPage() {
               </li>
             </ol>
           </nav>
-          <span className="eyebrow">Origin Labs · Centre for Development of Electronic Devices</span>
+          <span className="eyebrow">DICEL · DeKUT</span>
           <h1>About the IC Engineering Lab</h1>
           <p>
             An academic microelectronics and electronic systems laboratory at Dedan Kimathi University of Technology, advancing hands-on semiconductor competence and research in Kenya.
@@ -108,7 +108,7 @@ export default function AboutPage() {
       <section className="section about-overview">
         <div className="container about-overview-grid">
           <div className="about-overview-visual">
-            <LabVisual kind="laboratory" showBadge={false} />
+            <LabVisual kind="laboratory" showBadge={false} eager />
             <span className="image-note">
               <span className="eyebrow">DeKUT · Nyeri, Kenya</span>
               <b>Building semiconductor competence through practical engineering.</b>
@@ -119,7 +119,7 @@ export default function AboutPage() {
             <span className="eyebrow">Overview</span>
             <h2>Where Ideas Become Silicon.</h2>
             <p>
-              The Integrated Circuit Engineering Lab (DICEL), housed under the <b>Centre for Development of Electronic Devices (CDED)</b> at Dedan Kimathi University of Technology, brings together students, faculty, and industry partners to learn and build across the full silicon lifecycle.
+              DICEL is the integrated circuit engineering lab at Dedan Kimathi University of Technology. It brings together students, faculty, and research partners to learn and work on integrated circuits and electronic systems.
             </p>
             <p>
               We bridge theoretical circuit analysis with practical silicon fabrication. Our researchers design custom ASICs and FPGA accelerators using modern open-source electronic design automation (EDA) workflows alongside world-class laboratory testbenches.
@@ -217,7 +217,7 @@ export default function AboutPage() {
             <span className="eyebrow">Our Journey</span>
             <h2>Milestones & Growth</h2>
             <p>
-              From founding the microelectronics initiative to submitting our first physical silicon tapeouts, see how CDED has grown into a vibrant engineering ecosystem.
+              Learn about DICEL&apos;s development, research, and facilities at DeKUT.
             </p>
           </div>
 
@@ -241,7 +241,7 @@ export default function AboutPage() {
             <p>
               <b>Dedan Kimathi University of Technology (DeKUT)</b>
               <br />
-              Centre for Development of Electronic Devices (CDED)
+              DICEL · Integrated Circuit Engineering Lab
               <br />
               Origin Labs Building, Ground Floor
               <br />

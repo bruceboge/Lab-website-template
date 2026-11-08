@@ -79,7 +79,7 @@ export default function GalleryPage() {
           <span className="eyebrow">Visual Tour · Origin Labs</span>
           <h1>Lab Gallery & Workspaces</h1>
           <p>
-            Explore our design workstations, test and measurement benches, and silicon prototype visualizations across the Centre for Development of Electronic Devices (CDED).
+            Explore illustrations of DICEL research work, design tools, and laboratory facilities.
           </p>
         </div>
       </header>

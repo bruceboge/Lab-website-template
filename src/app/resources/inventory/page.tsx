@@ -5,7 +5,7 @@ import { InventoryDashboard } from "./_components/InventoryDashboard";
 export const metadata: Metadata = {
   title: "Equipment & Hardware Inventory",
   description:
-    "Browse microcontroller boards, FPGA trainers, analog sensors, and bench instrumentation available for loan and course practicals at DeKUT CDED.",
+    "Browse microcontroller boards, FPGA trainers, analog sensors, and bench instrumentation listed for DICEL learning and research.",
 };
 
 export default function InventoryPage() {
@@ -42,7 +42,7 @@ export default function InventoryPage() {
 
       <div className="container draft-notice-wrap">
         <p className="inventory-data-note" role="note">
-          Equipment counts and availability are sample catalog data and need confirmation from CDED staff. A submitted request is not a reservation; wait for lab approval before collecting equipment.
+          Equipment counts and availability are sample catalog data and need confirmation from DICEL staff. A submitted request is not a reservation; wait for lab approval before collecting equipment.
         </p>
       </div>
 
@@ -73,7 +73,7 @@ export default function InventoryPage() {
               <span className="eyebrow">Collection Desk</span>
               <h3>Pickup at Origin Labs</h3>
               <p>
-                Present your digital loan reference pass at the CDED Ground Floor equipment desk during lab hours (Monday to Friday, 08:30 – 16:30).
+                Present your digital loan reference pass at the DICEL equipment desk during lab hours (Monday to Friday, 08:30 – 16:30).
               </p>
             </article>
           </div>

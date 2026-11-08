@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LabVisual } from "@/components/LabVisual";
+import { DraftNotice } from "@/components/DraftNotice";
 
 export const metadata: Metadata = {
   title: "Resources, Inventory & Learning Pathways",
   description:
-    "Explore equipment inventory, course syllabi, EDA software tools, design process guides, and academic publications from DeKUT CDED.",
+    "Explore equipment inventory, course syllabi, EDA software tools, design process guides, and academic publications from DICEL at DeKUT.",
 };
 
 const resourceCards = [
   {
     tag: "Hardware & Loans",
     title: "Equipment & Hardware Inventory",
-    description: "Browse microcontrollers (Arduino, ESP32, RP2040), FPGA trainers (Basys 3, Tang Nano), analog sensors, and bench instrumentation with an interactive borrowing workflow.",
+    description: "Review the equipment catalog and current loan-request process. Confirm availability and borrowing requirements with the lab.",
     href: "/resources/inventory",
     visualKind: "laboratory" as const,
     cta: "Browse Inventory Dashboard →",
@@ -20,7 +21,7 @@ const resourceCards = [
   {
     tag: "Academic Curriculum",
     title: "Courses & Design Practice",
-    description: "Five comprehensive course pathways in Digital VLSI, Analog VLSI, Signals & IC Design, Mixed-Signal Design, and Embedded Systems & FPGA with verified syllabi.",
+    description: "Browse course descriptions, learning pathways, and design-process material related to integrated circuits and embedded systems.",
     href: "/resources/courses",
     visualKind: "digital" as const,
     cta: "Explore Courses →",
@@ -36,7 +37,7 @@ const resourceCards = [
   {
     tag: "EDA & Workbenches",
     title: "Tools, EDA Software & Facilities",
-    description: "Open-source EDA toolchains (Yosys, OpenROAD, Magic, KLayout, ngspice), BSIM process design kits (SKY130), and Origin Labs bench testbenches.",
+    description: "Find information about electronic design automation (EDA) software, simulation tools, and laboratory facilities.",
     href: "/resources/tools",
     visualKind: "digital" as const,
     cta: "Explore Design Tools →",
@@ -44,7 +45,7 @@ const resourceCards = [
   {
     tag: "Research Outputs",
     title: "Publications & Technical Papers",
-    description: "Peer-reviewed conference papers, technical reports, and open hardware releases authored by researchers and students at DeKUT CDED.",
+    description: "Peer-reviewed conference papers, technical reports, and open hardware releases authored by DICEL researchers and students.",
     href: "/resources/publications",
     visualKind: "analog" as const,
     cta: "View Publications →",
@@ -76,6 +77,13 @@ export default function ResourcesPage() {
           </p>
         </div>
       </header>
+
+      <div className="container draft-notice-wrap">
+        <DraftNotice>
+          Course outlines, equipment listings, software availability, and facility
+          details are provisional and must be confirmed by the lab.
+        </DraftNotice>
+      </div>
 
       <section className="section">
         <div className="container">

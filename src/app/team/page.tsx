@@ -5,7 +5,7 @@ import { DraftNotice } from "@/components/DraftNotice";
 export const metadata: Metadata = {
   title: "Research Team & Faculty",
   description:
-    "Meet the researchers, engineers, and students leading integrated circuit design, verification, and embedded systems at DeKUT CDED.",
+    "Meet the researchers, engineers, and students working on integrated circuit design, verification, and embedded systems at DICEL, DeKUT.",
 };
 
 type TeamMember = {
@@ -120,7 +120,7 @@ export default function TeamPage() {
             <span className="eyebrow">Academic & Technical Faculty</span>
             <h2>Leadership & Research Mentors</h2>
             <p>
-              Faculty members directing integrated circuit research, academic curriculum design, and laboratory operations at the Centre for Development of Electronic Devices (CDED).
+              Faculty members supporting integrated circuit research, learning, and laboratory work at DICEL.
             </p>
           </div>
 
@@ -149,7 +149,7 @@ export default function TeamPage() {
                       className="team-email-link"
                       aria-label={`Email ${person.name}`}
                     >
-                      ✉ {person.email}
+                      {person.email}
                     </a>
                   </div>
                 </article>

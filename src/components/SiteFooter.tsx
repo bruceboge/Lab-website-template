@@ -11,7 +11,7 @@ export default function SiteFooter() {
             Research, education, and silicon engineering for integrated circuits.
           </p>
           <small>
-            Centre for Development of Electronic Devices (CDED)
+            DeKUT Integrated Circuit Engineering Lab (DICEL)
             <br />
             Dedan Kimathi University of Technology
             <br />
@@ -87,8 +87,8 @@ export default function SiteFooter() {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© 2026 DeKUT Integrated Circuit Engineering Lab</span>
-        <span>Centre for Development of Electronic Devices · Dedan Kimathi University of Technology</span>
+        <span>© 2026 DICEL · Dedan Kimathi University of Technology</span>
+        <span>Integrated Circuit Engineering Lab · Nyeri, Kenya</span>
         <a href="#top">Back to top ↑</a>
       </div>
     </footer>

@@ -8,8 +8,8 @@ export default function LabBrand() {
         <path d="M14 14h12v12H14zM2 13h6m-6 7h6m-6 7h6m24-14h6m-6 7h6m-6 7h6M13 2v6m7-6v6m7-6v6m-14 24v6m7-6v6m7-6v6" />
       </svg>
       <span>
-        <b>IC Engineering Lab</b>
-        <small>Dedan Kimathi University of Technology</small>
+        <b>DICEL</b>
+        <small>Integrated Circuit Engineering Lab · DeKUT</small>
       </span>
     </Link>
   );

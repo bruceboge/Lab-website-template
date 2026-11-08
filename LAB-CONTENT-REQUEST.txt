@@ -1,0 +1,106 @@
+DICEL WEBSITE CONTENT REQUEST
+==========================================
+
+Purpose
+-------
+Please provide approved, current information for the website. Some names,
+statistics, project descriptions, schedules, equipment entries, and course
+details currently shown are sample content only. They must be checked and
+replaced before the website is published. If a detail is not approved for
+public use, mark it "do not publish" rather than supplying private information.
+
+1. Official lab identity and overview
+-------------------------------------
+- Official public name of the lab and approved acronym.
+- Approved description of DICEL's relationship to Dedan Kimathi University of
+  Technology.
+- Approved short description (1-2 sentences) for the homepage and search
+  results.
+- Approved overview, purpose, mission, vision, and history/milestones, with
+  dates that can be verified.
+- Approved research and teaching areas, in priority order.
+- Preferred public terminology and any wording that should not be used.
+
+2. Research projects
+-------------------
+For each project the lab wants listed:
+- Approved title, short summary, and public project description.
+- Current status and the date that status was last checked.
+- Project lead and contributors, with approved public names and roles.
+- Research question, approach, and results that may be stated publicly.
+- Exact measurements, units, test conditions, and evidence supporting each
+  numerical result or performance claim.
+- Process node, platform, tools, partners, funding acknowledgements, and
+  intellectual-property or release restrictions, where applicable.
+- Public report, repository, presentation, or publication links.
+- Approved images, captions, and image credits.
+
+3. Staff and student profiles
+-----------------------------
+For every person to be listed:
+- Name as they wish it to appear, current official role, and affiliation.
+- Approved short biography and research interests.
+- University email or other contact route approved for publication.
+- Optional portrait and written permission to publish it.
+- Confirmation of whether student profiles and contact details may be shown.
+
+4. Courses and learning material
+--------------------------------
+- Official course title and code, programme, level/year, and semester.
+- Approved course summary, prerequisites, learning outcomes, and syllabus.
+- Verified lecture/lab hours, duration, assessment details, and required
+  equipment or software.
+- Instructor name and public contact route, if approved.
+- Official course outline or learning-resource links.
+- Confirmation of which courses and learning pathways are currently offered.
+
+5. Equipment, facilities, and borrowing
+---------------------------------------
+- Current equipment name, manufacturer, model, and confirmed quantity.
+- Number available for loan versus equipment restricted to supervised lab use.
+- Availability source and update frequency; do not describe stock as real-time
+  unless it is actually maintained in real time.
+- Eligibility, required approvals, loan duration, collection/return process,
+  safety conditions, and contact for assistance.
+- Confirmed facility names, location/building/room, opening hours, access
+  requirements, and accessibility information.
+- Approved photographs of the actual spaces and equipment, with captions,
+  credits, and permission to publish. Identify any illustration as an
+  illustration rather than a photograph of the facility.
+
+6. Events
+---------
+For each current or archived event:
+- Approved title, status, date, start/end time, and time zone.
+- Confirmed venue and accessibility or attendance requirements.
+- Approved summary, agenda, speakers, affiliations, and speaker consent.
+- Registration link, capacity, fees (if any), and organizer contact.
+- For past events, confirmed outcomes and approved photos/captions.
+- Date on which the listing should be reviewed or removed.
+
+7. Publications and research outputs
+------------------------------------
+For each output:
+- Full citation exactly as it should appear, including author order.
+- Publication type, venue/publisher, year, volume/issue/pages where available.
+- DOI or stable public URL and a link to the permitted full text.
+- Publication status (published, accepted, preprint, report, or other).
+- Confirmation from the authors that the record and link are correct.
+- For software, datasets, or hardware, the public release link and license.
+
+8. Contact and institutional details
+------------------------------------
+- Public email, telephone, postal/physical address, and map link.
+- Confirmed visitor and office hours, including holiday/appointment caveats.
+- Correct university URLs, social accounts, and preferred contact
+  route for students, partners, equipment requests, and media enquiries.
+- Approved privacy, accessibility, and website feedback contacts or policies.
+
+9. Review and approval
+---------------------
+- Name/role of the person authorized to approve public website content.
+- For each section above, mark: approved, needs correction, or do not publish.
+- Include the date of approval and the next review date for time-sensitive
+  information such as people, inventory, events, and project status.
+- Flag claims requiring legal, university communications, funder, partner, or
+  participant approval before publication.
