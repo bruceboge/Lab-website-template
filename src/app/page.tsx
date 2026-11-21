@@ -121,14 +121,16 @@ export default function Home() {
                 <div className="project-card-copy">
                   <div className="project-card-meta">
                     <span className="tag">{p.type}</span>
-                    <span className="tag-status">{p.status}</span>
+                    <span className="project-card-status">{p.status}</span>
                   </div>
                   <h3>{p.title}</h3>
-                  <p className="project-node-badge">Node: {p.targetNode}</p>
                   <p>{p.summary}</p>
+                  <p className="project-card-spec">{p.specs[0]?.label}: {p.specs[0]?.value}</p>
+                  <div className="project-card-tools" aria-label="Tools used">
+                    {p.toolsUsed.slice(0, 2).map((tool) => <span key={tool}>{tool}</span>)}
+                  </div>
                   <span className="card-foot">
-                    <span>Year: {p.year}</span>
-                    <b>Read Architecture ↗</b>
+                    <b>Project details ↗</b>
                   </span>
                 </div>
               </Link>
