@@ -2,7 +2,6 @@ import Link from "next/link";
 import { PROJECTS_DATA } from "@/data/projects";
 import { EVENTS_DATA } from "@/data/events";
 import { LabVisual } from "@/components/LabVisual";
-import { DraftNotice } from "@/components/DraftNotice";
 
 const siteDescription =
   "DICEL is the integrated circuit engineering lab at Dedan Kimathi University of Technology in Nyeri, Kenya.";
@@ -56,7 +55,6 @@ export default function Home() {
       <section className="home-hero">
         <div className="container home-hero-grid">
           <div className="home-hero-copy">
-            <span className="eyebrow">DeKUT · Integrated Circuit Engineering Lab</span>
             <h1>Integrated circuit engineering at DeKUT.</h1>
             <p>
               The lab brings together electronics research, design practice, and learning in integrated circuits and electronic systems.
@@ -76,19 +74,10 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="container draft-notice-wrap">
-        <DraftNotice>
-          This site is a content preview. Research details, people, facilities,
-          equipment, and event information must be confirmed by the lab before
-          publication.
-        </DraftNotice>
-      </div>
-
       <section className="home-explore section" aria-labelledby="home-explore-title">
         <div className="container">
           <div className="home-explore-heading">
             <div>
-              <span className="eyebrow">Start here</span>
               <h2 id="home-explore-title">Explore the lab</h2>
             </div>
             <p>
@@ -118,7 +107,6 @@ export default function Home() {
         <div className="container">
           <div className="editorial-heading">
             <div>
-              <span className="eyebrow">Research</span>
               <h2>Selected projects</h2>
             </div>
             <Link className="button button-small button-outline-green" href="/projects">
@@ -154,7 +142,6 @@ export default function Home() {
           <div className="container">
             <div className="editorial-heading">
               <div>
-                <span className="eyebrow">Events</span>
                 <h2>Upcoming at the lab</h2>
               </div>
               <Link className="button button-small button-outline-green" href="/events">
@@ -179,7 +166,6 @@ export default function Home() {
       <section className="section lab-cta">
         <div className="container lab-cta-inner">
           <div>
-            <span className="eyebrow">Connect</span>
             <h2>Learn more about the lab</h2>
             <p>
               For information about research, learning opportunities, or collaboration, contact the lab.

@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PROJECTS_DATA } from "@/data/projects";
 import { LabVisual } from "@/components/LabVisual";
-import { DraftNotice } from "@/components/DraftNotice";
 
 export function generateStaticParams() {
   return PROJECTS_DATA.map(({ slug }) => ({ slug }));
@@ -90,10 +89,6 @@ export default async function ProjectDetailPage({
             <span><b>Origin Labs · DeKUT</b></span>
           </div>
         </div>
-      </div>
-
-      <div className="container draft-notice-wrap">
-        <DraftNotice>Project status, technical metrics, outcomes, and researcher details are draft records that need confirmation.</DraftNotice>
       </div>
 
       <section className="section project-detail-body">

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { DraftNotice } from "@/components/DraftNotice";
 
 export const metadata: Metadata = {
   title: "Publications & Research Reports",
@@ -113,10 +112,6 @@ export default function PublicationsPage() {
           </p>
         </div>
       </header>
-
-      <div className="container draft-notice-wrap">
-        <DraftNotice>Publication titles, authors, venues, dates, and links need verification before citation.</DraftNotice>
-      </div>
 
       <section className="section publications-section">
         <div className="container">

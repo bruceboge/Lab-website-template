@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PROJECTS_DATA } from "@/data/projects";
 import { LabVisual } from "@/components/LabVisual";
-import { DraftNotice } from "@/components/DraftNotice";
 
 export const metadata: Metadata = {
   title: "Integrated Circuit Engineering Projects",
@@ -35,10 +34,6 @@ export default function ProjectsPage() {
           </p>
         </div>
       </header>
-
-      <div className="container draft-notice-wrap">
-        <DraftNotice>Project status, technical metrics, outcomes, and researcher details are draft records that need confirmation.</DraftNotice>
-      </div>
 
       <section className="section projects-section">
         <div className="container">

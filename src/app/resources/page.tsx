@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LabVisual } from "@/components/LabVisual";
-import { DraftNotice } from "@/components/DraftNotice";
 
 export const metadata: Metadata = {
   title: "Resources, Inventory & Learning Pathways",
@@ -77,13 +76,6 @@ export default function ResourcesPage() {
           </p>
         </div>
       </header>
-
-      <div className="container draft-notice-wrap">
-        <DraftNotice>
-          Course outlines, equipment listings, software availability, and facility
-          details are provisional and must be confirmed by the lab.
-        </DraftNotice>
-      </div>
 
       <section className="section">
         <div className="container">

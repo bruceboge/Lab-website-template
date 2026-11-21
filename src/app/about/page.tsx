@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LabVisual } from "@/components/LabVisual";
-import { DraftNotice } from "@/components/DraftNotice";
 
 export const metadata: Metadata = {
   title: "About DICEL · DeKUT",
@@ -99,10 +98,6 @@ export default function AboutPage() {
           </p>
         </div>
       </header>
-
-      <div className="container draft-notice-wrap">
-        <DraftNotice>Institutional milestones, facility descriptions, and history text need confirmation from the lab before public release.</DraftNotice>
-      </div>
 
       {/* Lab Overview */}
       <section className="section about-overview">

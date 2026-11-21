@@ -40,12 +40,6 @@ export default function InventoryPage() {
         </div>
       </header>
 
-      <div className="container draft-notice-wrap">
-        <p className="inventory-data-note" role="note">
-          Equipment counts and availability are sample catalog data and need confirmation from DICEL staff. A submitted request is not a reservation; wait for lab approval before collecting equipment.
-        </p>
-      </div>
-
       {/* Guidance Cards */}
       <section className="section compact inventory-guidance-section">
         <div className="container">

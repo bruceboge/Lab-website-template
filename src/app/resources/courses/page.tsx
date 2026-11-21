@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LabVisual } from "@/components/LabVisual";
-import { DraftNotice } from "@/components/DraftNotice";
 
 export const metadata: Metadata = {
   title: "Integrated Circuit & Embedded Courses",
@@ -135,13 +134,6 @@ export default function CoursesPage() {
           </p>
         </div>
       </header>
-
-      <div className="container draft-notice-wrap">
-        <DraftNotice>
-          Course names, codes, prerequisites, schedules, instructors, syllabi,
-          and equipment must be confirmed against the official DeKUT curriculum.
-        </DraftNotice>
-      </div>
 
       {/* Featured Process Guide Link Card */}
       <section className="section compact" style={{ paddingBottom: 0 }}>

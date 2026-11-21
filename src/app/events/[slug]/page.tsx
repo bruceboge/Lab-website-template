@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EVENTS_DATA } from "@/data/events";
 import { LabVisual } from "@/components/LabVisual";
-import { DraftNotice } from "@/components/DraftNotice";
 import { EventRsvpForm } from "./_components/EventRsvpForm";
 
 export function generateStaticParams() {
@@ -93,10 +92,6 @@ export default async function EventDetailPage({
             <span><b>DeKUT Students & Researchers</b></span>
           </div>
         </div>
-      </div>
-
-      <div className="container draft-notice-wrap">
-        <DraftNotice>Event details are draft information. An interest request is not a confirmed registration.</DraftNotice>
       </div>
 
       <section className="section event-detail-body">

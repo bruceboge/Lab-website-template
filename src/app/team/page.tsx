@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { DraftNotice } from "@/components/DraftNotice";
 
 export const metadata: Metadata = {
   title: "Research Team & Faculty",
@@ -86,7 +85,7 @@ const teamMembers: TeamMember[] = [
 
 export default function TeamPage() {
   return (
-    <main id="main" tabIndex={-1} className="content-page">
+    <main id="main" tabIndex={-1} className="content-page team-page">
       <header className="page-hero">
         <div className="container page-hero-inner">
           <nav aria-label="Breadcrumb">
@@ -102,110 +101,32 @@ export default function TeamPage() {
               </li>
             </ol>
           </nav>
-          <span className="eyebrow">People & Leadership · Origin Labs</span>
-          <h1>Our Research Team</h1>
-          <p>
-            Meet the faculty, research fellows, and engineering students advancing semiconductor competence, chip design, and hands-on hardware education at Dedan Kimathi University of Technology.
-          </p>
+          <h1>Meet the team</h1>
         </div>
       </header>
 
-      <div className="container draft-notice-wrap">
-        <DraftNotice>Names, roles, biographies, and contact details need confirmation from the lab before public release.</DraftNotice>
-      </div>
-
       <section className="section team-section">
         <div className="container">
-          <div className="section-head">
-            <span className="eyebrow">Academic & Technical Faculty</span>
-            <h2>Leadership & Research Mentors</h2>
-            <p>
-              Faculty members supporting integrated circuit research, learning, and laboratory work at DICEL.
-            </p>
-          </div>
-
-          <div className="grid-3 team-grid">
-            {teamMembers
-              .filter((m) => m.category === "Leadership")
-              .map((person) => (
-                <article className="card team-card" key={person.name}>
-                  <div className="team-avatar">
-                    <span className="avatar-monogram">{person.initials}</span>
-                    <span className="avatar-tag">{person.category}</span>
+          <div className="team-grid">
+            {teamMembers.map((person) => (
+              <article className="team-card" key={person.name}>
+                <div className="team-avatar" aria-hidden="true">
+                  <span className="avatar-monogram">{person.initials}</span>
+                </div>
+                <div className="team-card-copy">
+                  <div className="team-card-text">
+                    <span className="team-role">{person.role}</span>
+                    <h2 className="team-name" title={person.name}>{person.name}</h2>
                   </div>
-                  <span className="eyebrow team-role">{person.role}</span>
-                  <h3 className="team-name">{person.name}</h3>
-                  <p className="team-bio">{person.bio}</p>
-                  <div className="team-focus">
-                    {person.focus.map((f) => (
-                      <span className="tag" key={f}>
-                        {f}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="team-contact">
-                    <a
-                      href={`mailto:${person.email}`}
-                      className="team-email-link"
-                      aria-label={`Email ${person.name}`}
-                    >
-                      {person.email}
-                    </a>
-                  </div>
-                </article>
-              ))}
+                  <a className="team-mail" href={`mailto:${person.email}`} aria-label={`Email ${person.name}`}>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M3.5 6.5h17v11h-17zM4 7l8 6 8-6" />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            ))}
           </div>
-
-          <div className="section-head" style={{ marginTop: 64 }}>
-            <span className="eyebrow">Graduate & Undergraduate Fellows</span>
-            <h2>Student Researchers & Engineers</h2>
-            <p>
-              Talented engineering students conducting thesis investigations, tapeout verifications, and bench prototyping.
-            </p>
-          </div>
-
-          <div className="grid-4 team-grid">
-            {teamMembers
-              .filter((m) => m.category !== "Leadership")
-              .map((person) => (
-                <article className="card team-card" key={person.name}>
-                  <div className="team-avatar team-avatar--small">
-                    <span className="avatar-monogram">{person.initials}</span>
-                    <span className="avatar-tag">{person.category}</span>
-                  </div>
-                  <span className="eyebrow team-role">{person.role}</span>
-                  <h3 className="team-name" style={{ fontSize: "18px" }}>
-                    {person.name}
-                  </h3>
-                  <p className="team-bio" style={{ fontSize: "13px" }}>
-                    {person.bio}
-                  </p>
-                  <div className="team-focus">
-                    {person.focus.map((f) => (
-                      <span className="tag" key={f}>
-                        {f}
-                      </span>
-                    ))}
-                  </div>
-                </article>
-              ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Callout Section */}
-      <section className="section compact">
-        <div className="container callout">
-          <div>
-            <span className="eyebrow">Collaborate With Us</span>
-            <h2>Join the Lab as a Student or Researcher</h2>
-            <p>
-              DeKUT students interested in VLSI circuit design, embedded hardware, or final-year projects are encouraged to apply for lab attachment and mentorship opportunities.
-            </p>
-          </div>
-          <Link className="button button-gold" href="/contact">
-            Get in touch with the team →
-          </Link>
         </div>
       </section>
     </main>
