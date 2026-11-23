@@ -1,5 +1,4 @@
 "use client";
-
 import { useRef, useState, type KeyboardEvent, type MouseEvent } from "react";
 import PrimaryNavigation from "@/components/PrimaryNavigation";
 

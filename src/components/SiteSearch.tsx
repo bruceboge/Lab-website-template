@@ -1,6 +1,5 @@
 "use client";
-
-import Link from "next/link";
+import Link from "@/components/next-link";
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 
 const destinations = [
@@ -191,8 +190,6 @@ export default function SiteSearch() {
           <circle cx="10.8" cy="10.8" r="6.8" />
           <path d="m16 16 5 5" />
         </svg>
-        <span>Search</span>
-        <kbd>Ctrl K</kbd>
       </button>
       <dialog
         className="site-search-dialog"

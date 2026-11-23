@@ -1,6 +1,5 @@
 "use client";
-
-import Link from "next/link";
+import Link from "@/components/next-link";
 import { useRef, type FocusEvent, type KeyboardEvent } from "react";
 
 type NavigationLink = {

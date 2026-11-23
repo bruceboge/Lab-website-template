@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dicel.dkut.ac.ke/sitemap.xml

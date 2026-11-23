@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/next-link";
 import NavigationDropdown from "@/components/NavigationDropdown";
 
 const resourceLinks = [
@@ -6,7 +6,6 @@ const resourceLinks = [
   { label: "Publications", href: "/resources/publications" },
   { label: "Courses", href: "/resources/courses" },
   { label: "Inventory", href: "/resources/inventory" },
-  { label: "Tools & facilities", href: "/resources/tools" },
 ];
 
 const aboutLinks = [
@@ -18,7 +17,6 @@ const aboutLinks = [
 
 const linksAfterResources = [
   { label: "Projects", href: "/projects" },
-  { label: "Support Us", href: "/support" },
 ];
 
 export default function PrimaryNavigation({

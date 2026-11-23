@@ -28,7 +28,7 @@ export async function handleEnquiry(request: Request, purpose: EnquiryPurpose) {
     if (delivery === "not-configured") {
       return Response.json(
         { ok: false, message: "Online message delivery is not configured yet. Please email deice@dkut.ac.ke directly." },
-        { status: 503 },
+        { status: 200 },
       );
     }
 
