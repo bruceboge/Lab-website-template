@@ -6,13 +6,13 @@ type Theme = "light" | "dark";
 const THEME_CHANGE_EVENT = "dicel-theme-change";
 
 function applyTheme(theme: Theme) {
-  document.documentElement.dataset.theme = theme;
+  document.documentElement.dataset["theme"] = theme;
   document.documentElement.style.colorScheme = theme;
   window.dispatchEvent(new Event(THEME_CHANGE_EVENT));
 }
 
 function getThemeSnapshot(): Theme {
-  return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+  return document.documentElement.dataset["theme"] === "dark" ? "dark" : "light";
 }
 
 function getServerThemeSnapshot(): Theme {
