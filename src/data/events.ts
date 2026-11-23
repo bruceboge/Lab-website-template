@@ -17,7 +17,7 @@ export const EVENTS_DATA: EventDetail[] = [
   {
     slug: "digital-design-workshop",
     title: "Digital VLSI Design & Synthesis Workshop",
-    date: "November 18–19, 2026",
+    date: "February 18–19, 2027",
     time: "09:00 – 16:30 EAT",
     venue: "DICEL Workstations, DeKUT Nyeri Campus",
     kind: "Workshop",
@@ -39,7 +39,7 @@ export const EVENTS_DATA: EventDetail[] = [
   {
     slug: "research-seminar",
     title: "Research Seminar: Sensing Systems & Edge Microelectronics",
-    date: "December 4, 2026",
+    date: "March 7, 2027",
     time: "14:00 – 17:00 EAT",
     venue: "DeKUT Resource Centre Dome · Hall B, Nyeri Campus",
     kind: "Seminar",
@@ -61,7 +61,7 @@ export const EVENTS_DATA: EventDetail[] = [
   {
     slug: "open-lab-day",
     title: "Annual Open Lab Day & Silicon Showcase",
-    date: "January 22, 2027",
+    date: "May 14, 2027",
     time: "10:00 – 16:00 EAT",
     venue: "Origin Labs · Ground Floor, DeKUT Nyeri Main Campus",
     kind: "Open Day",

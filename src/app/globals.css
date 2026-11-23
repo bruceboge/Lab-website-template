@@ -99,7 +99,7 @@ main p{line-height:1.78}
 .contact-map-art{position:relative;margin-top:10px;border-radius:8px;overflow:hidden;border:1px solid #dfe6de}.contact-map-art .lab-visual{aspect-ratio:16/7}.map-label{position:absolute;left:12px;bottom:12px;padding:7px 10px;background:#fff;color:#173a2b;border-radius:4px;box-shadow:0 4px 12px #13291b22;font-size:12px}
 .contact-form-panel{background:#fff;border:1px solid #e1e8e0;border-radius:8px;padding:clamp(24px,4vw,44px);box-shadow:0 14px 38px #14281a0c}.contact-form-panel .form{max-width:none}.form-note{display:block;color:#718075;margin-top:16px;font-size:11px}
 .social-icons{display:flex;align-items:center;gap:9px;margin-top:8px}
-.social-icons span{width:36px;height:36px;border:1px solid #ffffff55;border-radius:50%;display:grid;place-items:center;color:#fff}
+.social-icons a{width:36px;height:36px;border:1px solid #ffffff55;border-radius:50%;display:grid;place-items:center;color:#fff}
 .social-icons svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 @media(max-width:760px){.support-contact-grid{grid-template-columns:1fr;gap:30px}.support-contact-card{padding:26px 22px}.contact-layout{grid-template-columns:1fr;gap:34px}.contact-form-panel{padding:25px 20px}.contact-map-art .lab-visual{aspect-ratio:16/9}}
 

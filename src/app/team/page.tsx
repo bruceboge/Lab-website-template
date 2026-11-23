@@ -83,6 +83,12 @@ const teamMembers: TeamMember[] = [
   },
 ];
 
+const groups: { label: string; category: TeamMember["category"] }[] = [
+  { label: "Faculty & Leadership", category: "Leadership" },
+  { label: "Graduate Researchers", category: "Researchers" },
+  { label: "Undergraduate Assistants", category: "Students" },
+];
+
 export default function TeamPage() {
   return (
     <main id="main" tabIndex={-1} className="content-page team-page">
@@ -102,33 +108,75 @@ export default function TeamPage() {
             </ol>
           </nav>
           <h1>Meet the team</h1>
+          <p>
+            Researchers, engineers, and students working on integrated circuit
+            design, verification, and embedded systems at DeKUT.
+          </p>
         </div>
       </header>
 
-      <section className="section team-section">
-        <div className="container">
-          <div className="team-grid">
-            {teamMembers.map((person) => (
-              <article className="team-card" key={person.name}>
-                <div className="team-avatar" aria-hidden="true">
-                  <span className="avatar-monogram">{person.initials}</span>
-                </div>
-                <div className="team-card-copy">
-                  <div className="team-card-text">
-                    <span className="team-role">{person.role}</span>
-                    <h2 className="team-name" title={person.name}>{person.name}</h2>
-                  </div>
-                  <a className="team-mail" href={`mailto:${person.email}`} aria-label={`Email ${person.name}`}>
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M3.5 6.5h17v11h-17zM4 7l8 6 8-6" />
-                    </svg>
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      {groups.map((group) => {
+        const members = teamMembers.filter(
+          (m) => m.category === group.category,
+        );
+        if (members.length === 0) return null;
+
+        return (
+          <section
+            className="section team-section"
+            key={group.category}
+            aria-labelledby={`team-group-${group.category}`}
+          >
+            <div className="container">
+              <h2
+                className="team-group-heading"
+                id={`team-group-${group.category}`}
+              >
+                {group.label}
+              </h2>
+
+              <div className="team-grid">
+                {members.map((person) => (
+                  <article className="team-card" key={person.name}>
+                    <div className="team-avatar" aria-hidden="true">
+                      <span className="avatar-monogram">
+                        {person.initials}
+                      </span>
+                    </div>
+                    <div className="team-card-copy">
+                      <div className="team-card-text">
+                        <span className="team-role">{person.role}</span>
+                        <h3 className="team-name" title={person.name}>
+                          {person.name}
+                        </h3>
+                      </div>
+                      <a
+                        className="team-mail"
+                        href={`mailto:${person.email}`}
+                        aria-label={`Email ${person.name}`}
+                      >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M3.5 6.5h17v11h-17zM4 7l8 6 8-6" />
+                        </svg>
+                      </a>
+                    </div>
+                    <div className="team-card-body">
+                      <p className="team-bio">{person.bio}</p>
+                      <div className="team-focus">
+                        {person.focus.map((tag) => (
+                          <span className="tag" key={tag}>
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })}
     </main>
   );
 }

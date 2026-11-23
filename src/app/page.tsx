@@ -6,6 +6,13 @@ import { LabVisual } from "@/components/LabVisual";
 const siteDescription =
   "DICEL is the integrated circuit engineering lab at Dedan Kimathi University of Technology in Nyeri, Kenya.";
 
+const proofStats = [
+  { value: "5", label: "IC Courses", detail: "Academic pathways" },
+  { value: "18+", label: "Hardware Units", detail: "Lab inventory" },
+  { value: "6", label: "Active Projects", detail: "Research & design" },
+  { value: "2022", label: "Established", detail: "DeKUT · Nyeri" },
+];
+
 const destinations = [
   {
     number: "01",
@@ -55,6 +62,7 @@ export default function Home() {
       <section className="home-hero">
         <div className="container home-hero-grid">
           <div className="home-hero-copy">
+            <span className="eyebrow">DeKUT · Integrated Circuit Engineering Lab</span>
             <h1>Integrated circuit engineering at DeKUT.</h1>
             <p>
               The lab brings together electronics research, design practice, and learning in integrated circuits and electronic systems.
@@ -71,6 +79,19 @@ export default function Home() {
           <div className="home-hero-art">
             <LabVisual kind="digital" showBadge={false} eager />
           </div>
+        </div>
+      </section>
+
+      {/* Proof strip */}
+      <section className="container" aria-label="Lab statistics">
+        <div className="proof-strip">
+          {proofStats.map((stat) => (
+            <div className="proof-item" key={stat.label}>
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+              <small>{stat.detail}</small>
+            </div>
+          ))}
         </div>
       </section>
 

@@ -93,7 +93,7 @@ export default function ContactPage() {
           </div>
 
           {/* Form Panel */}
-          <div className="contact-form-panel card" style={{ padding: clampPadding }}>
+          <div className="contact-form-panel card">
             <span className="eyebrow">Online Inquiry Form</span>
             <h2>Send Us a Message</h2>
             <p style={{ marginBottom: 24 }}>
@@ -106,5 +106,3 @@ export default function ContactPage() {
     </main>
   );
 }
-
-const clampPadding = "clamp(24px, 4vw, 36px)";
