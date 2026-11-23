@@ -2656,8 +2656,9 @@ p a:not(.button), .contact-location > a { text-decoration: underline; text-under
 /* Match the reference's portrait-first staff gallery and compact name rail. */
 .team-page .container { width: min(1520px, 100%); padding-inline: clamp(20px, 4vw, 48px); }
 .team-page .page-hero { padding-block: 34px 20px; background: #fff; }
-.team-page .page-hero h1 { font-size: clamp(2.5rem, 4vw, 3.6rem); }
-.team-section { padding-block: 12px 88px; background: #fff; }
+.team-page .page-hero h1 { width: 100%; text-align: center; text-transform: uppercase; font-size: clamp(2.5rem, 4vw, 3.6rem); letter-spacing: .015em; }
+.team-page .page-hero-inner { display: block; }
+.team-section { padding-block: 108px 88px; background: #fff; }
 .team-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); align-items: start; gap: 28px; }
 .team-card { position: relative; overflow: hidden; border: 0; padding: 0; background: transparent; }
 .team-card::before { position: absolute; z-index: 1; inset: 0 0 auto; height: 4px; background: #216246; content: ""; }
