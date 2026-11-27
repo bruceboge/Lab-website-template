@@ -36,7 +36,15 @@ export default function MobileNavigation() {
       >
         <span aria-hidden="true" />
         <span aria-hidden="true" />
+        <span aria-hidden="true" />
       </button>
+      {open ? (
+        <div
+          className="mobile-nav-backdrop"
+          aria-hidden="true"
+          onClick={() => setOpen(false)}
+        />
+      ) : null}
       <PrimaryNavigation mobile id="mobile-primary-navigation" hidden={!open} />
     </div>
   );

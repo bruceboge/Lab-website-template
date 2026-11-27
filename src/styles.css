@@ -5301,49 +5301,109 @@ html:root[data-theme] body .process-stage-nav a span {
   }
 }
 
-/* Switch cleanly to mobile drawer before top nav links wrap */
+/* Switch cleanly to right-side half-screen mobile drawer before top nav links wrap */
 @media (max-width: 960px) {
   .desktop-nav {
     display: none !important;
   }
-  .mobile-nav {
-    display: block !important;
-    margin-left: 8px;
-  }
   .nav-wrap .site-search-trigger {
     margin-left: auto;
+  }
+  .mobile-nav {
+    display: flex !important;
+    align-items: center;
+    margin-left: 6px;
+    flex-shrink: 0;
+  }
+  html:root[data-theme] body .mobile-nav-toggle {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    padding: 0;
+    display: grid;
+    place-content: center;
+    gap: 5px;
+    border: 1.5px solid rgba(255, 255, 255, 0.34);
+    background: transparent !important;
+    color: #ffffff !important;
+    cursor: pointer;
+    position: relative;
+    z-index: 1002;
+  }
+  html:root[data-theme] body .mobile-nav-toggle span {
+    display: block;
+    width: 19px;
+    height: 2px;
+    background: currentColor;
+    transition: transform 180ms ease, opacity 180ms ease;
+  }
+  .mobile-nav.is-open .mobile-nav-toggle {
+    border-color: var(--theme-gold);
+    color: var(--theme-gold) !important;
+  }
+  .mobile-nav.is-open .mobile-nav-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .mobile-nav.is-open .mobile-nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  .mobile-nav.is-open .mobile-nav-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  .mobile-nav-backdrop {
+    position: fixed;
+    top: 78px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(10, 22, 16, 0.38);
+    z-index: 999;
   }
   .mobile-nav.is-open nav:not([hidden]) {
     position: fixed !important;
     top: 78px !important;
     right: 0 !important;
-    left: 0 !important;
+    left: auto !important;
     bottom: 0 !important;
-    width: 100% !important;
+    width: min(52vw, 320px) !important;
     max-height: none !important;
-    padding: 20px 20px calc(28px + env(safe-area-inset-bottom)) !important;
+    padding: 18px 18px calc(24px + env(safe-area-inset-bottom)) !important;
     display: flex !important;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
     overflow-y: auto;
+    overscroll-behavior: contain;
     background: var(--nav-green) !important;
     border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
-    box-shadow: none !important;
+    border-left: 2px solid var(--theme-gold) !important;
+    box-shadow: -14px 0 36px rgba(10, 22, 16, 0.36) !important;
     z-index: 1000;
   }
   .mobile-nav-links > a:not(.button),
   .mobile-nav-links > .nav-dropdown > summary {
-    min-height: 48px;
+    min-height: 44px;
     display: flex;
     align-items: center;
-    padding: 10px 4px;
+    padding: 9px 4px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-    font-size: 16px;
+    font-size: 15px;
+    color: #ffffff !important;
+  }
+  .mobile-nav .nav-dropdown-menu {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-left: 2px solid var(--theme-gold) !important;
+    padding: 4px 0 6px 12px !important;
+  }
+  .mobile-nav .nav-dropdown-menu a {
+    min-height: 40px;
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #ffffff !important;
   }
   .mobile-nav-links .mobile-contact-link {
-    margin-top: 16px;
+    margin-top: 14px;
     width: 100%;
-    min-height: 48px;
+    min-height: 44px;
     justify-content: center;
     background: var(--theme-gold) !important;
     border-color: var(--theme-gold) !important;
@@ -5377,10 +5437,14 @@ html:root[data-theme] body .process-stage-nav a span {
   }
   .nav-wrap {
     width: calc(100% - 32px);
-    gap: 10px;
+    gap: 8px;
+  }
+  .mobile-nav-backdrop {
+    top: 68px;
   }
   .mobile-nav.is-open nav:not([hidden]) {
     top: 68px !important;
+    width: clamp(205px, 55vw, 290px) !important;
   }
   html:root[data-theme] body .container {
     width: calc(100% - 32px);
