@@ -3,17 +3,17 @@ import Image from "next/image";
 const visuals = {
   digital: {
     src: "/visuals/DICEL ENTRANCE VIEW2.webp",
-    alt: "Research posters displayed in the DICEL workspace",
+    alt: "Research posters displayed in the DeICE workspace",
     tag: "Digital IC Design",
   },
   analog: {
     src: "/visuals/OFFICE 1.webp",
-    alt: "Interior workspace at the DeKUT Integrated Circuit Engineering Lab",
+    alt: "Interior workspace at the DeKUT Integrated Circuit Engineering Laboratory",
     tag: "Analog & Mixed-Signal",
   },
   layout: {
     src: "/visuals/DICEL ENTRANCE VIEW.webp",
-    alt: "Research posters and work area inside the DICEL workspace",
+    alt: "Research posters and work area inside the DeICE workspace",
     tag: "Physical Design",
   },
   laboratory: {

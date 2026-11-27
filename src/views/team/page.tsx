@@ -3,7 +3,7 @@ import Image from "next/image";
 export const metadata = {
   title: "Research Team & Faculty",
   description:
-    "Meet the researchers, engineers, and students working on integrated circuit design, verification, and embedded systems at DICEL, DeKUT.",
+    "Meet the researchers, engineers, and students working on integrated circuit design, verification, and embedded systems at DeICE, DeKUT.",
 };
 
 type TeamMember = {

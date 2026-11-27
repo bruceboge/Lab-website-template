@@ -320,7 +320,7 @@ export const INVENTORY_ITEMS: InventoryItem[] = [
     name: "Analog & Mixed-Signal IC & Passives Assortment",
     category: "prototyping",
     categoryLabel: "Prototyping Kit",
-    model: "DICEL Component Lab Kit (NE555, LM358, TL072, 74HC Series)",
+    model: "DeICE Component Lab Kit (NE555, LM358, TL072, 74HC Series)",
     description: "Carefully curated kit containing precision op-amps, standard 74HC logic gates, quartz crystals, trim potentiometers, and 1% metal film resistors.",
     specs: ["DIP Op-Amps: LM358, TL072, OP07", "Digital Logic: 74HC00, 74HC04, 74HC74, 74HC595", "Resistors: E24 series 10Ω to 1MΩ (1% metal film)", "Capacitors: 10pF to 1000μF decoupling assortment"],
     totalQuantity: 25,

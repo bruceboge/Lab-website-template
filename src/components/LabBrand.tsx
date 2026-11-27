@@ -2,7 +2,7 @@ import Link from "@/components/next-link";
 
 function BrandMark() {
   return (
-    <svg className="brand-mark" viewBox="0 0 64 64" role="img" aria-label="DICEL circuit logo">
+    <svg className="brand-mark" viewBox="0 0 64 64" role="img" aria-label="DeICE circuit logo">
       <rect className="brand-mark-plate" x="7" y="7" width="50" height="50" />
       <rect className="brand-mark-chip" x="17" y="17" width="30" height="30" />
       <g className="brand-mark-traces" fill="none" strokeLinecap="square" strokeLinejoin="miter">
@@ -27,10 +27,10 @@ function BrandMark() {
 
 export default function LabBrand() {
   return (
-    <Link className="brand" href="/" aria-label="DICEL home">
+    <Link className="brand" href="/" aria-label="DeICE home">
       <BrandMark />
-      <span className="brand-copy" aria-label="DICEL">
-        <b>DICEL</b>
+      <span className="brand-copy" aria-label="DeICE">
+        <b>DeICE</b>
       </span>
     </Link>
   );

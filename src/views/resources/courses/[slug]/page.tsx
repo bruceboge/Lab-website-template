@@ -2,7 +2,7 @@ import Link from "@/components/next-link";
 
 export const metadata = {
   title: "Course Details",
-  description: "Course details for a DICEL integrated circuit engineering programme.",
+  description: "Course details for a DeICE integrated circuit engineering programme.",
 };
 
 const courseNames: Record<string, string> = {

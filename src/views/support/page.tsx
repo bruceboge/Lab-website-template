@@ -1,8 +1,8 @@
 import Link from "@/components/next-link";
 
 export const metadata = {
-  title: "Support DICEL",
-  description: "Partner with DICEL through equipment, research funding, scholarships, mentorship, and collaboration.",
+  title: "Support DeICE",
+  description: "Partner with DeICE through equipment, research funding, scholarships, mentorship, and collaboration.",
 };
 
 export default function SupportPage() {

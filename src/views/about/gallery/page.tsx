@@ -2,9 +2,9 @@ import Link from "@/components/next-link";
 import { LabVisual } from "@/components/LabVisual";
 
 export const metadata = {
-  title: "Laboratory Gallery · DICEL DeKUT",
+  title: "Laboratory Gallery · DeICE DeKUT",
   description:
-    "Visual tour of the DeKUT Integrated Circuit Engineering Lab, showcasing design workstations, measurement instrumentation, and silicon prototypes.",
+    "Visual tour of the DeKUT Integrated Circuit Engineering Laboratory, showcasing design workstations, measurement instrumentation, and silicon prototypes.",
 };
 
 const galleryItems: {
@@ -17,29 +17,29 @@ const galleryItems: {
   {
     kind: "laboratory",
     src: "/visuals/ORIGIN LAB BANNER.webp",
-    alt: "Origin Labs and DICEL hardware engineering entrance banner at DeKUT",
-    title: "Origin Labs & DICEL Facility",
+    alt: "Origin Labs and DeICE hardware engineering entrance banner at DeKUT",
+    title: "Origin Labs & DeICE Facility",
     category: "Hardware Facility",
   },
   {
     kind: "layout",
     src: "/visuals/DICEL ENTRANCE VIEW.webp",
-    alt: "Research posters and work area inside the DICEL workspace",
-    title: "DICEL Laboratory Entrance & Poster Wall",
+    alt: "Research posters and work area inside the DeICE workspace",
+    title: "DeICE Laboratory Entrance & Poster Wall",
     category: "Research Showcase",
   },
   {
     kind: "digital",
     src: "/visuals/DICEL ENTRANCE VIEW2.webp",
-    alt: "Research posters displayed inside the DICEL workspace",
+    alt: "Research posters displayed inside the DeICE workspace",
     title: "Silicon & VLSI Research Gallery",
     category: "Digital VLSI",
   },
   {
     kind: "analog",
     src: "/visuals/OFFICE 1.webp",
-    alt: "Interior workspace at the DeKUT Integrated Circuit Engineering Lab",
-    title: "DICEL Design Studio & Workstations",
+    alt: "Interior workspace at the DeKUT Integrated Circuit Engineering Laboratory",
+    title: "DeICE Design Studio & Workstations",
     category: "Analog & Mixed-Signal",
   },
   {
@@ -52,7 +52,7 @@ const galleryItems: {
   {
     kind: "laboratory",
     src: "/visuals/ENTRANCE.webp",
-    alt: "Main entrance to the DICEL integrated circuit engineering laboratory",
+    alt: "Main entrance to the DeICE integrated circuit engineering laboratory",
     title: "DeKUT IC Engineering Lab Entrance",
     category: "Campus Lab",
   },
@@ -126,7 +126,7 @@ export default function GalleryPage() {
           </nav>
           <h1>Gallery</h1>
           <p>
-            A visual tour of the people, places, and workflows behind DICEL&apos;s work.
+            A visual tour of the people, places, and workflows behind DeICE&apos;s work.
           </p>
         </div>
       </header>

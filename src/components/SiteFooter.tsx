@@ -38,7 +38,7 @@ export default function SiteFooter() {
           <a href="https://www.dkut.ac.ke" target="_blank" rel="noreferrer">
             Dedan Kimathi University of Technology
           </a>
-          <span>© 2026 DICEL · All rights reserved</span>
+          <span>© 2026 DeICE · All rights reserved</span>
         </div>
         <div className="footer-controls">
           <ThemeToggle />

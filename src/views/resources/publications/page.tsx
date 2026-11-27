@@ -4,7 +4,7 @@ import Image from "next/image";
 export const metadata = {
   title: "Publications & Research Reports",
   description:
-    "Technical papers, conference proceedings, working reports, and open hardware releases from the DeKUT Integrated Circuit Engineering Lab.",
+    "Technical papers, conference proceedings, working reports, and open hardware releases from the DeKUT Integrated Circuit Engineering Laboratory.",
 };
 
 type Publication = {
@@ -100,7 +100,7 @@ export default function PublicationsPage() {
           </nav>
           <h1>Publications</h1>
           <p>
-            Peer-reviewed papers, institutional technical reports, white papers, and open hardware releases authored by researchers and students at the DeKUT Integrated Circuit Engineering Lab.
+            Peer-reviewed papers, institutional technical reports, white papers, and open hardware releases authored by researchers and students at the DeKUT Integrated Circuit Engineering Laboratory.
           </p>
         </div>
       </header>

@@ -230,7 +230,7 @@ export function BorrowModal({
               <label className="checkbox-label">
                 <input type="checkbox" required />
                 <span>
-                  I agree to DICEL equipment use and return guidelines.
+                  I agree to DeICE equipment use and return guidelines.
                 </span>
               </label>
 

@@ -6,7 +6,7 @@ import { LabVisual } from "@/components/LabVisual";
 import { HeroCircuitBackground } from "@/components/HeroCircuitBackground";
 
 const siteDescription =
-  "DICEL is the integrated circuit engineering lab at Dedan Kimathi University of Technology in Nyeri, Kenya.";
+  "DeICE is the DeKUT Integrated Circuit Engineering laboratory at Dedan Kimathi University of Technology in Nyeri, Kenya.";
 
 const proofStats = [
   { value: "5", label: "IC Courses", detail: "Academic pathways" },
@@ -40,8 +40,8 @@ export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ResearchOrganization",
-    name: "DeKUT Integrated Circuit Engineering Lab",
-    alternateName: "DICEL",
+    name: "DeKUT Integrated Circuit Engineering Laboratory",
+    alternateName: "DeICE",
     parentOrganization: {
       "@type": "University",
       name: "Dedan Kimathi University of Technology",

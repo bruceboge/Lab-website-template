@@ -2,12 +2,12 @@ import Link from "@/components/next-link";
 import { LabVisual } from "@/components/LabVisual";
 
 export const metadata = {
-  title: "About DICEL",
+  title: "About DeICE",
   description: "About the Integrated Circuit Engineering Lab at Dedan Kimathi University of Technology.",
 };
 
 const milestones = [
-  ["2022", "DICEL established", "The lab began developing microelectronics teaching, facilities, and design tools."],
+  ["2022", "DeICE established", "The lab began developing microelectronics teaching, facilities, and design tools."],
   ["2023", "Open-silicon curriculum", "Open-source semiconductor workflows and SkyWater 130nm PDK education were integrated."],
   ["2024", "Advanced prototyping", "Origin Labs expanded with precision oscilloscopes, function generators, and assembly facilities."],
   ["2025/2026", "Silicon development", "The laboratory supported multi-project tapeouts, silicon bring-up, and regional collaboration."],
@@ -27,7 +27,7 @@ export default function AboutPage() {
         <div className="container about-story-grid">
           <div className="about-story-copy">
             <h2>Our laboratory</h2>
-            <p>DICEL brings together students, faculty, and research partners to learn and work on integrated circuits and electronic systems. It connects circuit theory with practical silicon design, testing, and embedded hardware development.</p>
+            <p>DeICE brings together students, faculty, and research partners to learn and work on integrated circuits and electronic systems. It connects circuit theory with practical silicon design, testing, and embedded hardware development.</p>
             <p>Our work includes digital and analog integrated circuit design, FPGA prototyping, verification, physical layout, and low-power sensor systems.</p>
           </div>
           <LabVisual kind="laboratory" showBadge={false} eager />

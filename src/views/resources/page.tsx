@@ -3,7 +3,7 @@ import Link from "@/components/next-link";
 export const metadata = {
   title: "Resources, Inventory & Learning Pathways",
   description:
-    "Explore equipment inventory, course syllabi, EDA software tools, design process guides, and academic publications from DICEL at DeKUT.",
+    "Explore equipment inventory, course syllabi, EDA software tools, design process guides, and academic publications from DeICE at DeKUT.",
 };
 
 const resourceCards = [

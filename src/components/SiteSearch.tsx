@@ -3,9 +3,9 @@ import Link from "@/components/next-link";
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 
 const destinations = [
-  { label: "Home", description: "DICEL overview and featured work", href: "/", keywords: "start landing" },
+  { label: "Home", description: "DeICE overview and featured work", href: "/", keywords: "start landing" },
   { label: "About the lab", description: "Mission, facilities, and contact information", href: "/about", keywords: "about lab overview" },
-  { label: "Team", description: "Meet the people at DICEL", href: "/team", keywords: "people staff researchers" },
+  { label: "Team", description: "Meet the people at DeICE", href: "/team", keywords: "people staff researchers" },
   { label: "Gallery", description: "Photos and visual highlights", href: "/about/gallery", keywords: "photos images" },
   { label: "Projects", description: "Research and engineering projects", href: "/projects", keywords: "research design engineering" },
   { label: "Events", description: "Lab events and activities", href: "/events", keywords: "calendar workshops talks" },
@@ -178,9 +178,9 @@ export default function SiteSearch() {
       <button
         className="site-search-trigger"
         type="button"
-        aria-label="Search the DICEL website"
+        aria-label="Search the DeICE website"
         aria-keyshortcuts="Control+K Meta+K"
-        title="Search the DICEL website (Ctrl+K / Cmd+K)"
+        title="Search the DeICE website (Ctrl+K / Cmd+K)"
         onClick={() => {
           setQuery("");
           setOpen(true);
@@ -208,7 +208,7 @@ export default function SiteSearch() {
       >
         <div className="site-search-panel">
           <div className="site-search-heading">
-            <h2 id="site-search-title">Search DICEL</h2>
+            <h2 id="site-search-title">Search DeICE</h2>
             <button
               type="button"
               className="site-search-close"

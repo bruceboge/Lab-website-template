@@ -4,7 +4,7 @@ import { InventoryDashboard } from "./_components/InventoryDashboard";
 export const metadata = {
   title: "Equipment & Hardware Inventory",
   description:
-    "Browse microcontroller boards, FPGA trainers, analog sensors, and bench instrumentation listed for DICEL learning and research.",
+    "Browse microcontroller boards, FPGA trainers, analog sensors, and bench instrumentation listed for DeICE learning and research.",
 };
 
 export default function InventoryPage() {
@@ -33,7 +33,7 @@ export default function InventoryPage() {
           </nav>
           <h1>Inventory</h1>
           <p>
-            Browse the equipment available for learning and research in the DICEL lab.
+            Browse the equipment available for learning and research in the DeICE laboratory.
           </p>
         </div>
       </header>

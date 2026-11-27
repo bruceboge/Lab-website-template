@@ -850,7 +850,7 @@ main[id="main"]:focus{outline:none}
   }
 }
 
-/* DICEL palette and compact project cards. */
+/* DeICE palette and compact project cards. */
 :root {
   --bg: #f6f6f6;
   --surface: #f3f3f3;
@@ -2847,7 +2847,7 @@ p a:not(.button), .contact-location > a { text-decoration: underline; text-under
   }
 }
 
-/* Brand palette: white space, DICEL green, engineering gold, and restrained red. */
+/* Brand palette: white space, DeICE green, engineering gold, and restrained red. */
 :root {
   --bg: #fcfcfc;
   --surface: #ffffff;
@@ -2969,7 +2969,7 @@ body {
   background: #414141;
 }
 
-/* Keep DICEL's interface square-edged in both themes. */
+/* Keep DeICE's interface square-edged in both themes. */
 :root { --radius: 0; }
 .card, .team-card, .home-explore-card, .home-event-card, .event-row-card,
 .gallery-card, .gallery-grid figure, .work-card, .facility-card, .focus-card,
@@ -4083,7 +4083,7 @@ body {
 }
 
 /* ==========================================================================
-   Refined DICEL Editorial & Engineering System (DSAIL DeKUT Inspired)
+   Refined DeICE Editorial & Engineering System (DSAIL DeKUT Inspired)
    - 2+1 Font System (Outfit display, Plus Jakarta Sans body, IBM Plex Mono)
    - Catchy modern white-space & gray shade hierarchy (light & dark themes)
    - Bold navigation bar with institutional DeKUT emerald & warm gold

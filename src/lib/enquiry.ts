@@ -21,7 +21,7 @@ export async function handleEnquiry(request: Request, purpose: EnquiryPurpose) {
 
     const { name, email, subject, message } = parsed.data;
     const delivery = await sendLabEmail({
-      subject: `DICEL ${purpose.toLowerCase()} enquiry: ${subject}`,
+      subject: `DeICE ${purpose.toLowerCase()} enquiry: ${subject}`,
       text: [`Type: ${purpose}`, `Name: ${name}`, `Email: ${email}`, `Subject: ${subject}`, "", message].join("\n"),
     });
 

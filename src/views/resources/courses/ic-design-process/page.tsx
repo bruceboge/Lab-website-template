@@ -27,7 +27,7 @@ const designStages: DesignStage[] = [
     tools: "Requirements documents, system models and architecture trade-off studies",
     image: "/visuals/STI 2025 MEDICAL.webp",
     imageAlt: "Conference poster for a low-cost RFID medical equipment tracking system",
-    caption: "A DICEL conference poster documents the requirements and design of a medical equipment tracking system.",
+    caption: "A DeICE conference poster documents the requirements and design of a medical equipment tracking system.",
   },
   {
     id: "architecture",
@@ -42,7 +42,7 @@ const designStages: DesignStage[] = [
     tools: "Block diagrams, Python or MATLAB models, SPICE and architectural simulation",
     image: "/visuals/STI 2025 LOW VOLTAGE CMOS.webp",
     imageAlt: "Conference poster for a low-voltage CMOS low-noise amplifier",
-    caption: "A DICEL conference poster presents the architecture and simulated results of a CMOS low-noise amplifier.",
+    caption: "A DeICE conference poster presents the architecture and simulated results of a CMOS low-noise amplifier.",
   },
   {
     id: "rtl",
@@ -57,7 +57,7 @@ const designStages: DesignStage[] = [
     tools: "Verilog/SystemVerilog, VHDL, schematic capture and version control",
     image: "/visuals/STI 2025 VLSI DECIMATION.webp",
     imageAlt: "Conference poster for a VLSI decimation filter for audio applications",
-    caption: "A DICEL conference poster documents a VLSI filter design for audio signal processing.",
+    caption: "A DeICE conference poster documents a VLSI filter design for audio signal processing.",
   },
   {
     id: "verification",
@@ -72,7 +72,7 @@ const designStages: DesignStage[] = [
     tools: "Icarus Verilog, Verilator, GTKWave, SPICE and formal verification tools",
     image: "/visuals/STI 15 MHZ FREQUENCY SYNTHESIZER.webp",
     imageAlt: "Conference poster showing the design and results of a 15 MHz digital phase-locked loop",
-    caption: "A DICEL conference poster reports design and simulation results for a digital phase-locked loop.",
+    caption: "A DeICE conference poster reports design and simulation results for a digital phase-locked loop.",
   },
   {
     id: "synthesis",
@@ -87,7 +87,7 @@ const designStages: DesignStage[] = [
     tools: "Yosys or commercial synthesis tools; standard-cell libraries and test tools",
     image: "/visuals/STI 2025 LOW POWER SIGMA.webp",
     imageAlt: "Conference poster for a low-power sigma-delta modulator for hearing aids",
-    caption: "A DICEL conference poster describes a low-power sigma-delta modulator implemented in CMOS.",
+    caption: "A DeICE conference poster describes a low-power sigma-delta modulator implemented in CMOS.",
   },
   {
     id: "physical-design",
@@ -131,7 +131,7 @@ const designStages: DesignStage[] = [
     ],
     tools: "Foundry process equipment, optical microscopy and electron microscopy",
     image: "/visuals/DICEL ENTRANCE VIEW.webp",
-    imageAlt: "Research posters displayed inside the DICEL laboratory",
+    imageAlt: "Research posters displayed inside the DeICE laboratory",
     caption: "Research posters in the lab show examples of work developed through the design process.",
   },
   {

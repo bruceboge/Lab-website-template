@@ -1,6 +1,6 @@
-# DICEL Next.js App
+# DeICE Next.js App
 
-The DICEL website is built with Next.js App Router.
+The DeICE website is built with Next.js App Router.
 
 ## Development
 

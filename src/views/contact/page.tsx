@@ -2,9 +2,9 @@ import Link from "@/components/next-link";
 import { EnquiryForm } from "@/views/contact/_components/EnquiryForm";
 
 export const metadata = {
-  title: "Contact DICEL · DeKUT",
+  title: "Contact DeICE · DeKUT",
   description:
-    "Contact DICEL at Dedan Kimathi University of Technology about research, learning opportunities, equipment, or collaboration.",
+    "Contact DeICE at Dedan Kimathi University of Technology about research, learning opportunities, equipment, or collaboration.",
 };
 
 export default function ContactPage() {
@@ -63,7 +63,7 @@ export default function ContactPage() {
               <p style={{ margin: "6px 0 10px" }}>
                 <b>Dedan Kimathi University of Technology (DeKUT)</b>
                 <br />
-                DICEL · Integrated Circuit Engineering Lab
+                DeICE · DeKUT Integrated Circuit Engineering Laboratory
                 <br />
                 Origin Labs Building, Ground Floor
                 <br />

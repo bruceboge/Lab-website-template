@@ -29,7 +29,7 @@ export async function POST(request: Request) {
     if (!item.courses.includes(data.course)) {
       return Response.json({ ok: false, message: "Select a course associated with this item." }, { status: 400 });
     }
-    const reference = `DICEL-LN-${new Date().getFullYear()}-${crypto.randomUUID().slice(0, 8).toUpperCase()}`;
+    const reference = `DeICE-LN-${new Date().getFullYear()}-${crypto.randomUUID().slice(0, 8).toUpperCase()}`;
     const dueDate = new Date();
     dueDate.setDate(dueDate.getDate() + data.durationDays);
     const delivery = await sendLabEmail({
@@ -60,7 +60,7 @@ export async function POST(request: Request) {
         course: data.course,
         quantity: data.quantity,
         dueDate: dueDate.toLocaleDateString("en-KE"),
-        pickupLocation: "DICEL Lab, Dedan Kimathi University of Technology, Nyeri",
+        pickupLocation: "DeICE, DeKUT Integrated Circuit Engineering Laboratory, Dedan Kimathi University of Technology, Nyeri",
       },
     });
   } catch {

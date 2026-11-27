@@ -5,10 +5,10 @@ import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: {
-    default: "DICEL · DeKUT",
-    template: "%s · DICEL",
+    default: "DeICE · DeKUT",
+    template: "%s · DeICE",
   },
-  description: "DICEL is the integrated circuit engineering lab at Dedan Kimathi University of Technology.",
+  description: "DeICE is the DeKUT Integrated Circuit Engineering laboratory at Dedan Kimathi University of Technology.",
 };
 
 const THEME_BOOTSTRAP = `try{var t=localStorage.getItem("dicel-theme");document.documentElement.dataset.theme=t==="dark"?"dark":"light";document.documentElement.style.colorScheme=document.documentElement.dataset.theme}catch(e){document.documentElement.dataset.theme="light"}`;

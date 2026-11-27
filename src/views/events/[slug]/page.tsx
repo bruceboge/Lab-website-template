@@ -18,7 +18,7 @@ export function generateMetadata({
   if (!event) return { title: "Event Not Found" };
 
   return {
-    title: `${event.title} · DICEL Events`,
+    title: `${event.title} · DeICE Events`,
     description: event.summary,
   };
 }
