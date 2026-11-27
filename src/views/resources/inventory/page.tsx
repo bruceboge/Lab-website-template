@@ -31,9 +31,9 @@ export default function InventoryPage() {
               </li>
             </ol>
           </nav>
-          <h1>Inventory & Facilities</h1>
+          <h1>Inventory</h1>
           <p>
-            Browse a draft listing of development boards, FPGA trainers, sensors, test instruments, and prototyping kits.
+            Browse the equipment available for learning and research in the DICEL lab.
           </p>
         </div>
       </header>
@@ -42,17 +42,6 @@ export default function InventoryPage() {
       <section className="section inventory-section">
         <div className="container">
           <InventoryDashboard />
-          <div className="facility-list">
-            <h2>Software & Facilities</h2>
-            <div className="facility-list-grid">
-              <article><h3>Digital EDA</h3><p>Yosys, OpenROAD/OpenLane, OpenSTA, Vivado</p></article>
-              <article><h3>Analog Simulation</h3><p>ngspice, Xyce, Qucs-S, MATLAB/Simulink</p></article>
-              <article><h3>Verification</h3><p>Verilator, Cocotb, Icarus Verilog, GTKWave</p></article>
-              <article><h3>Layout & Signoff</h3><p>KLayout, Magic VLSI, Netgen, SkyWater 130nm PDK</p></article>
-              <article><h3>Bench Facilities</h3><p>Oscilloscopes, dual function generators, DC supplies, logic analyzers</p></article>
-              <article><h3>Visit or Access</h3><p><Link href="/contact">Schedule a laboratory visit or equipment enquiry</Link></p></article>
-            </div>
-          </div>
         </div>
       </section>
     </main>

@@ -1,4 +1,5 @@
 import Link from "@/components/next-link";
+import Image from "@/components/next-image";
 
 export const metadata = {
   title: "Publications & Research Reports",
@@ -13,70 +14,63 @@ type Publication = {
   year: string;
   type: "Technical Report" | "Conference Paper" | "Hardware Release" | "White Paper";
   abstract: string;
-  doiOrUrl: string;
-  linkLabel: string;
+  poster: string;
 };
 
 const publications: Publication[] = [
   {
-    title: "Design and Verification of a 32-Bit Educational RISC-V Core on Open-Source FPGA Toolchains",
-    authors: "K. Mwai, F. Muthoni, J. Ndichu",
-    venue: "DICEL Technical Report Series, Vol. 4, No. 2",
-    year: "2026",
-    type: "Technical Report",
-    abstract: "Documents the architecture, pipeline hazard resolution, and cycle-accurate verification of an RV32I soft-core synthesized using Yosys and nextpnr targeting Artix-7 and Gowin FPGAs.",
-    doiOrUrl: "/projects/risc-v-fpga-platform",
-    linkLabel: "View Project IP & Report →",
-  },
-  {
-    title: "Sub-Microamp Analog Front-End Architecture for Soil Impedance Sensing in Precision Agriculture",
-    authors: "C. Kiprop, J. Ndichu, B. Wanjiku",
-    venue: "East African Conference on Engineering and Applied Sciences (EACEAS)",
+    title: "15 MHz Frequency Synthesizer Digital Phase-Locked Loop Using 130 nm Technology",
+    authors: "Ian Kigen, Marion Ogono, Esther Muraguri, Waweru Njeri",
+    venue: "9th DeKUT STI&E International Conference",
     year: "2025",
     type: "Conference Paper",
-    abstract: "Presents a chopper-stabilized capacitive-feedback instrumentation amplifier designed in SkyWater 130nm CMOS, achieving >94 dB CMRR and <1.8 μA quiescent current under solar-harvested power.",
-    doiOrUrl: "/projects/low-power-sensor-interface",
-    linkLabel: "View Project & Data →",
+    abstract: "Presents a 130 nm digital phase-locked loop designed to generate a 15 MHz output. The poster describes its phase-frequency detector, loop filter, voltage-controlled oscillator, and frequency divider.",
+    poster: "/visuals/STI 15 MHZ FREQUENCY SYNTHESIZER.jpg",
   },
   {
-    title: "Comparative Layout and Noise Margin Analysis of 6T SRAM Bitcells in 130nm Open PDKs",
-    authors: "B. Wanjiku, J. Ndichu",
-    venue: "DICEL Microelectronics Research Notes",
+    title: "Low-Power Sigma-Delta Modulator for Hearing Aid Applications",
+    authors: "Jesica Nyambura, Kelvin Rai, Waweru Njeri, Esther Muraguri",
+    venue: "9th DeKUT STI&E Conference",
     year: "2025",
-    type: "Technical Report",
-    abstract: "Evaluates read/write noise margins and lithographic design-rule compliance for high-density 6T memory arrays across process, voltage, and temperature corners using KLayout and Magic.",
-    doiOrUrl: "/projects/sram-layout-study",
-    linkLabel: "View Layout Study →",
+    type: "Conference Paper",
+    abstract: "Describes a low-power 1-bit sigma-delta modulator for hearing aids, implemented using a 130 nm CMOS process. The poster reports a total power consumption of 121.9 μW.",
+    poster: "/visuals/STI 2025 LOW POWER SIGMA.jpg",
   },
   {
-    title: "Democratizing Microchip Design in East Africa: Open-Source EDA Toolchains in Undergraduate Education",
-    authors: "J. Ndichu, K. Mwai",
-    venue: "IEEE Engineering Education in Sub-Saharan Africa Symposium",
+    title: "Low-Voltage CMOS Low-Noise Amplifier for IoT Application",
+    authors: "Faith Muchira, Joel Mungai, Esther Muraguri, Waweru Njeri",
+    venue: "9th DeKUT STI&E Conference",
     year: "2025",
-    type: "White Paper",
-    abstract: "Synthesizes pedagogical insights and curriculum design principles for integrating open-source PDKs (SkyWater 130nm, GF180) into university electrical and electronic engineering programs.",
-    doiOrUrl: "/about",
-    linkLabel: "Read Lab Overview →",
+    type: "Conference Paper",
+    abstract: "Presents a CMOS common-source cascode low-noise amplifier with inductive degeneration for IoT receiver applications, including simulated gain, noise, and matching results.",
+    poster: "/visuals/STI 2025 LOW VOLTAGE CMOS.jpg",
   },
   {
-    title: "Automated Functional Verification and Constrained-Random Testing of Serial Bus IP Cores",
-    authors: "F. Muthoni, B. Wanjiku",
-    venue: "DeKUT Undergraduate Engineering Research Showcase",
-    year: "2024",
-    type: "Hardware Release",
-    abstract: "An open-source Cocotb-driven regression test suite providing 100% functional and line coverage metrics for configurable UART and SPI communication modules.",
-    doiOrUrl: "/projects/uart-verification",
-    linkLabel: "Explore Verification IP →",
+    title: "Design of a Low-Cost RFID System for Medical Equipment Tracking in Kenyan Hospitals",
+    authors: "Kariuki J. Kiboi, Kirera Angela Wambui, Princeley Muthomi, Waweru Njeri, Wambui Nyabero",
+    venue: "9th DeKUT STI&E International Conference",
+    year: "2025",
+    type: "Conference Paper",
+    abstract: "Proposes an RFID-based system for tracking medical equipment in Kenyan hospitals, combining a reader, antennas, and a dashboard to support equipment visibility and inventory management.",
+    poster: "/visuals/STI 2025 MEDICAL.jpg",
   },
   {
-    title: "On-Chip PVT Variation Sensor Architecture Using Multi-Stage Ring Oscillators",
-    authors: "D. Ochieng, K. Mwai",
-    venue: "DICEL Student Tapeout Documentation Series",
-    year: "2024",
-    type: "Technical Report",
-    abstract: "Details layout optimization and frequency counter integration for post-silicon characterization of inter-die process shifts submitted to educational multi-project wafer shuttles.",
-    doiOrUrl: "/projects/ring-oscillator-monitor",
-    linkLabel: "View Silicon Design →",
+    title: "RFID-Based Smart Speed Advisory System for Enhanced Road Safety",
+    authors: "Collins Theuri, Felix Kipkosgei, Johnson Karimi, Waweru Njeri",
+    venue: "9th DeKUT STI&E International Conference",
+    year: "2025",
+    type: "Conference Paper",
+    abstract: "Describes a hybrid speed advisory system using roadside RFID tags for zone detection and GPS as a fallback, with on-vehicle speed monitoring, voice alerts, and event telemetry.",
+    poster: "/visuals/STI 2025 RFID.jpg",
+  },
+  {
+    title: "VLSI Decimation Filter for Sigma-Delta ADC for Audio Applications",
+    authors: "Ann Njeri Mucheke, Ian Roy Otieno, Esther Muraguri, Waweru Njeri",
+    venue: "9th DeKUT STI&E Conference",
+    year: "2025",
+    type: "Conference Paper",
+    abstract: "Presents a two-stage FIR-CIC decimation filter for audio that converts a 1-bit, 3.072 MHz signal to 16-bit samples at 48 kHz, targeting digital hearing-aid applications.",
+    poster: "/visuals/STI 2025 VLSI DECIMATION.jpg",
   },
 ];
 
@@ -132,9 +126,22 @@ export default function PublicationsPage() {
                 </div>
 
                 <div className="pub-action">
-                  <Link href={pub.doiOrUrl} className="button button-small button-outline-green">
-                    {pub.linkLabel}
-                  </Link>
+                  <a
+                    className="pub-poster-link"
+                    href={pub.poster}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Open poster for ${pub.title}`}
+                  >
+                    <Image
+                      className="pub-poster"
+                      src={pub.poster}
+                      alt={`Conference poster: ${pub.title}`}
+                      width={900}
+                      height={1400}
+                    />
+                    <span>Open poster ↗</span>
+                  </a>
                 </div>
               </article>
             ))}

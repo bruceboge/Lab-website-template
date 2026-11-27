@@ -2,23 +2,23 @@ import Image from "@/components/next-image";
 
 const visuals = {
   digital: {
-    src: "/visuals/digital-design.svg",
-    alt: "Illustration of an integrated circuit package with digital signal-routing traces",
+    src: "/visuals/DICEL ENTRANCE VIEW2.jpg",
+    alt: "Research posters displayed in the DICEL workspace",
     tag: "Digital IC Design",
   },
   analog: {
-    src: "/visuals/analog-interface.svg",
-    alt: "Illustration of an analog front-end and signal-conditioning circuit",
+    src: "/visuals/OFFICE 1.jpg",
+    alt: "Interior workspace at the DeKUT Integrated Circuit Engineering Lab",
     tag: "Analog & Mixed-Signal",
   },
   layout: {
-    src: "/visuals/physical-design.svg",
-    alt: "Illustration of an integrated-circuit physical layout and routing",
+    src: "/visuals/DICEL ENTRANCE VIEW.jpg",
+    alt: "Research posters and work area inside the DICEL workspace",
     tag: "Physical Design",
   },
   laboratory: {
-    src: "/visuals/laboratory.svg",
-    alt: "Illustrative placeholder for an electronics laboratory workspace, not a photograph of the DeKUT facility",
+    src: "/visuals/OFFICE 2.jpg",
+    alt: "Equipment and workstations inside the DeKUT laboratory",
     tag: "Research Facility",
   },
 } as const;
