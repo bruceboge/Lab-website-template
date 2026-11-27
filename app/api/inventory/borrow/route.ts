@@ -11,7 +11,7 @@ const borrowSchema = z.object({
   purpose: z.string().min(2),
   quantity: z.number().int().min(1).max(10),
   durationDays: z.number().int().min(1).max(60),
-  supervisor: z.string().trim().min(2),
+  supervisor: z.string().trim().max(100).optional(),
 });
 
 export async function POST(request: Request) {
@@ -37,7 +37,9 @@ export async function POST(request: Request) {
       text: [
         `Reference: ${reference}`, `Item: ${item.name} (${item.model})`, `Quantity: ${data.quantity}`,
         `Borrower: ${data.studentName} (${data.studentId})`, `Email: ${data.email}`, `Course: ${data.course}`,
-        `Purpose: ${data.purpose}`, `Supervisor: ${data.supervisor}`, `Requested duration: ${data.durationDays} days`,
+        `Purpose: ${data.purpose}`,
+        ...(data.supervisor ? [`Supervisor: ${data.supervisor}`] : []),
+        `Requested duration: ${data.durationDays} days`,
       ].join("\n"),
     });
     if (delivery === "not-configured") {

@@ -60,7 +60,6 @@ export default function ProjectDetailPage({
 
           <div className="project-detail-hero-meta">
             <span className="eyebrow">{project.type} IC Design</span>
-            <span className="tag-status">{project.status}</span>
           </div>
 
           <h1>{project.title}</h1>

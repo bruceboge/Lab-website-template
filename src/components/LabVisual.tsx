@@ -2,22 +2,22 @@ import Image from "@/components/next-image";
 
 const visuals = {
   digital: {
-    src: "/visuals/DICEL ENTRANCE VIEW2.jpg",
+    src: "/visuals/DICEL ENTRANCE VIEW2.webp",
     alt: "Research posters displayed in the DICEL workspace",
     tag: "Digital IC Design",
   },
   analog: {
-    src: "/visuals/OFFICE 1.jpg",
+    src: "/visuals/OFFICE 1.webp",
     alt: "Interior workspace at the DeKUT Integrated Circuit Engineering Lab",
     tag: "Analog & Mixed-Signal",
   },
   layout: {
-    src: "/visuals/DICEL ENTRANCE VIEW.jpg",
+    src: "/visuals/DICEL ENTRANCE VIEW.webp",
     alt: "Research posters and work area inside the DICEL workspace",
     tag: "Physical Design",
   },
   laboratory: {
-    src: "/visuals/OFFICE 2.jpg",
+    src: "/visuals/OFFICE 2.webp",
     alt: "Equipment and workstations inside the DeKUT laboratory",
     tag: "Research Facility",
   },

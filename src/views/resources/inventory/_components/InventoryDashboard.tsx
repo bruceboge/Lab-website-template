@@ -99,8 +99,8 @@ export function InventoryDashboard() {
               aria-label="Filter by availability status"
             >
               <option value="all">All Statuses</option>
-              <option value="available">Available to Borrow (Take-home)</option>
-              <option value="in-lab-only">Supervised On-Site Bench Use</option>
+              <option value="available">Available to Borrow</option>
+              <option value="in-lab-only">In-lab use</option>
             </select>
           </label>
         </div>
@@ -135,7 +135,7 @@ export function InventoryDashboard() {
                 ? "In-lab use"
                 : item.status === "reserved"
                   ? "Reserved"
-                  : `${item.availableQuantity} available`;
+                  : "Available";
 
             return (
               <li className="inventory-list-item" key={item.id}>

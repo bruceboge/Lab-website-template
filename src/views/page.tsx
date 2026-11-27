@@ -11,7 +11,7 @@ const siteDescription =
 const proofStats = [
   { value: "5", label: "IC Courses", detail: "Academic pathways" },
   { value: "18+", label: "Hardware Units", detail: "Origin Labs inventory" },
-  { value: "6", label: "Active Projects", detail: "Silicon & FPGA research" },
+  { value: "6", label: "Research Projects", detail: "Silicon & FPGA work" },
   { value: "2022", label: "Established", detail: "DeKUT · Nyeri" },
 ];
 
@@ -111,7 +111,7 @@ export default function Home() {
               <h2 id="home-explore-title">Explore the lab</h2>
             </div>
             <p>
-              Find active silicon research, academic course pathways, and laboratory facility details.
+              Find silicon research, academic course pathways, and laboratory facility details.
             </p>
           </div>
           <div className="home-explore-grid">
@@ -154,8 +154,6 @@ export default function Home() {
                   <div className="project-showcase-top">
                     <div className="project-meta-line">
                       <span>{p.type}</span>
-                      <span aria-hidden="true">·</span>
-                      <span>{p.status}</span>
                       <span aria-hidden="true">·</span>
                       <span className="tabular-nums">{p.year}</span>
                     </div>

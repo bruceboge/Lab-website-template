@@ -17,6 +17,7 @@ const aboutLinks = [
 
 const linksAfterResources = [
   { label: "Projects", href: "/projects" },
+  { label: "Support Us", href: "/support" },
 ];
 
 export default function PrimaryNavigation({

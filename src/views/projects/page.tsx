@@ -28,7 +28,7 @@ export default function ProjectsPage() {
           </nav>
           <h1>Projects</h1>
           <p>
-            Explore active research prototypes, tapeout shuttles, and educational hardware systems spanning digital VLSI, analog front-ends, physical layout, and automated verification.
+            Explore research prototypes, tapeout shuttles, and educational hardware systems spanning digital VLSI, analog front-ends, physical layout, and automated verification.
           </p>
         </div>
       </header>
@@ -44,7 +44,7 @@ export default function ProjectsPage() {
               >
                 <LabVisual kind={project.visualKind} showBadge={false} />
                 <div>
-                  <span className="eyebrow">{project.type} · {project.status} · {project.year}</span>
+                  <span className="eyebrow">{project.type} · {project.year}</span>
                   <h2>{project.title}</h2>
                   <p>{project.summary}</p>
                 </div>

@@ -96,7 +96,6 @@ export function BorrowModal({
       purpose: formData.get("purpose"),
       quantity: Number(formData.get("quantity") || 1),
       durationDays: Number(formData.get("durationDays") || 14),
-      supervisor: formData.get("supervisor"),
     };
 
     try {
@@ -143,24 +142,7 @@ export function BorrowModal({
         {!receipt ? (
           <>
             <div className="modal-header">
-              <span className="eyebrow">{item.categoryLabel} · Equipment Loan</span>
               <h2 id="borrow-modal-title">{item.name}</h2>
-              <p className="modal-sub">
-                Model: <b>{item.model}</b> · Stored at: <i>{item.location}</i>
-              </p>
-              <div className="modal-badges">
-                <span className="tag-pill tag-avail">
-                  {item.availableQuantity} available in stock
-                </span>
-                <span className="tag-pill tag-neutral">
-                  Standard Loan: {item.loanDuration}
-                </span>
-                {item.status === "in-lab-only" && (
-                  <span className="tag-pill tag-lab">
-                    Supervised In-Lab Session
-                  </span>
-                )}
-              </div>
             </div>
 
             {error && (
@@ -202,7 +184,7 @@ export function BorrowModal({
                   />
                 </label>
                 <label>
-                  Associated Course
+                  Course
                   <select name="course" defaultValue={defaultCourse}>
                     {TEMPLATE_COURSES.map((course) => (
                       <option key={course} value={course}>
@@ -215,50 +197,40 @@ export function BorrowModal({
 
               <div className="form-row-2">
                 <label>
-                  Project Purpose
+                  Purpose
                   <select name="purpose" defaultValue="Coursework Practical">
-                    <option value="Coursework Practical">Coursework Lab Practical</option>
-                    <option value="Final Year Project (FYP)">Final Year Capstone Project (FYP)</option>
-                    <option value="Research & Tapeout">Postgraduate / Research Tapeout</option>
-                    <option value="Student Innovation / Club">Engineering Club / Innovation Hub</option>
+                    <option value="Coursework Practical">Coursework Practical</option>
+                    <option value="Final Year Project (FYP)">Final Year Project (FYP)</option>
+                    <option value="Research & Tapeout">Research & Tapeout</option>
+                    <option value="Student Innovation / Club">Student Innovation</option>
                   </select>
                 </label>
                 <label>
-                  Supervisor / Course Instructor
-                  <input
-                    name="supervisor"
-                    required
-                    placeholder="e.g. Dr. K. Mwai / Course Lecturer"
-                  />
+                  Duration
+                  <select name="durationDays" defaultValue="14">
+                    <option value="7">7 Days</option>
+                    <option value="14">14 Days</option>
+                    <option value="30">30 Days</option>
+                  </select>
                 </label>
               </div>
 
-              <div className="form-row-2">
-                <label>
-                  Quantity Needed
-                  <input
-                    name="quantity"
-                    type="number"
-                    min={1}
-                    max={Math.min(item.availableQuantity, 4)}
-                    defaultValue={1}
-                    required
-                  />
-                </label>
-                <label>
-                  Requested Duration (Days)
-                  <select name="durationDays" defaultValue="14">
-                    <option value="7">7 Days (1 Week)</option>
-                    <option value="14">14 Days (2 Weeks - Standard)</option>
-                    <option value="30">30 Days (Extended Project Work)</option>
-                  </select>
-                </label>
-              </div>
+              <label>
+                Quantity
+                <input
+                  name="quantity"
+                  type="number"
+                  min={1}
+                  max={Math.max(1, Math.min(item.availableQuantity, 4))}
+                  defaultValue={1}
+                  required
+                />
+              </label>
 
               <label className="checkbox-label">
                 <input type="checkbox" required />
                 <span>
-                  I agree to follow the loan, use, safety, and return requirements provided by DICEL lab staff.
+                  I agree to DICEL equipment use and return guidelines.
                 </span>
               </label>
 
@@ -276,7 +248,7 @@ export function BorrowModal({
                   className="button button-gold"
                   disabled={busy}
                 >
-                  {busy ? "Submitting Request…" : "Confirm Loan Request →"}
+                  {busy ? "Submitting…" : "Submit Request →"}
                 </button>
               </div>
             </form>

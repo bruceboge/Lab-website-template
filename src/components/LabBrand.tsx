@@ -3,9 +3,9 @@ import Link from "@/components/next-link";
 function BrandMark() {
   return (
     <svg className="brand-mark" viewBox="0 0 64 64" role="img" aria-label="DICEL circuit logo">
-      <rect className="brand-mark-plate" x="7" y="7" width="50" height="50" rx="12" />
-      <rect className="brand-mark-chip" x="17" y="17" width="30" height="30" rx="7" />
-      <g className="brand-mark-traces" fill="none" strokeLinecap="round" strokeLinejoin="round">
+      <rect className="brand-mark-plate" x="7" y="7" width="50" height="50" />
+      <rect className="brand-mark-chip" x="17" y="17" width="30" height="30" />
+      <g className="brand-mark-traces" fill="none" strokeLinecap="square" strokeLinejoin="miter">
         <path d="M17 25H9M17 32H9M17 39H9" />
         <path d="M47 25h8M47 32h8M47 39h8" />
         <path d="M25 17v-8M32 17v-8M39 17v-8" />
@@ -14,12 +14,12 @@ function BrandMark() {
         <path d="M27 27h10v10H27z" />
       </g>
       <g className="brand-mark-nodes">
-        <circle cx="9" cy="25" r="1.8" />
-        <circle cx="9" cy="32" r="1.8" />
-        <circle cx="9" cy="39" r="1.8" />
-        <circle cx="55" cy="25" r="1.8" />
-        <circle cx="55" cy="32" r="1.8" />
-        <circle cx="55" cy="39" r="1.8" />
+        <rect x="7.2" y="23.2" width="3.6" height="3.6" />
+        <rect x="7.2" y="30.2" width="3.6" height="3.6" />
+        <rect x="7.2" y="37.2" width="3.6" height="3.6" />
+        <rect x="53.2" y="23.2" width="3.6" height="3.6" />
+        <rect x="53.2" y="30.2" width="3.6" height="3.6" />
+        <rect x="53.2" y="37.2" width="3.6" height="3.6" />
       </g>
     </svg>
   );

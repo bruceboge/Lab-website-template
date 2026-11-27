@@ -25,7 +25,7 @@ const publications: Publication[] = [
     year: "2025",
     type: "Conference Paper",
     abstract: "Presents a 130 nm digital phase-locked loop designed to generate a 15 MHz output. The poster describes its phase-frequency detector, loop filter, voltage-controlled oscillator, and frequency divider.",
-    poster: "/visuals/STI 15 MHZ FREQUENCY SYNTHESIZER.jpg",
+    poster: "/visuals/STI 15 MHZ FREQUENCY SYNTHESIZER.webp",
   },
   {
     title: "Low-Power Sigma-Delta Modulator for Hearing Aid Applications",
@@ -34,7 +34,7 @@ const publications: Publication[] = [
     year: "2025",
     type: "Conference Paper",
     abstract: "Describes a low-power 1-bit sigma-delta modulator for hearing aids, implemented using a 130 nm CMOS process. The poster reports a total power consumption of 121.9 μW.",
-    poster: "/visuals/STI 2025 LOW POWER SIGMA.jpg",
+    poster: "/visuals/STI 2025 LOW POWER SIGMA.webp",
   },
   {
     title: "Low-Voltage CMOS Low-Noise Amplifier for IoT Application",
@@ -43,7 +43,7 @@ const publications: Publication[] = [
     year: "2025",
     type: "Conference Paper",
     abstract: "Presents a CMOS common-source cascode low-noise amplifier with inductive degeneration for IoT receiver applications, including simulated gain, noise, and matching results.",
-    poster: "/visuals/STI 2025 LOW VOLTAGE CMOS.jpg",
+    poster: "/visuals/STI 2025 LOW VOLTAGE CMOS.webp",
   },
   {
     title: "Design of a Low-Cost RFID System for Medical Equipment Tracking in Kenyan Hospitals",
@@ -52,7 +52,7 @@ const publications: Publication[] = [
     year: "2025",
     type: "Conference Paper",
     abstract: "Proposes an RFID-based system for tracking medical equipment in Kenyan hospitals, combining a reader, antennas, and a dashboard to support equipment visibility and inventory management.",
-    poster: "/visuals/STI 2025 MEDICAL.jpg",
+    poster: "/visuals/STI 2025 MEDICAL.webp",
   },
   {
     title: "RFID-Based Smart Speed Advisory System for Enhanced Road Safety",
@@ -61,7 +61,7 @@ const publications: Publication[] = [
     year: "2025",
     type: "Conference Paper",
     abstract: "Describes a hybrid speed advisory system using roadside RFID tags for zone detection and GPS as a fallback, with on-vehicle speed monitoring, voice alerts, and event telemetry.",
-    poster: "/visuals/STI 2025 RFID.jpg",
+    poster: "/visuals/STI 2025 RFID.webp",
   },
   {
     title: "VLSI Decimation Filter for Sigma-Delta ADC for Audio Applications",
@@ -70,7 +70,7 @@ const publications: Publication[] = [
     year: "2025",
     type: "Conference Paper",
     abstract: "Presents a two-stage FIR-CIC decimation filter for audio that converts a 1-bit, 3.072 MHz signal to 16-bit samples at 48 kHz, targeting digital hearing-aid applications.",
-    poster: "/visuals/STI 2025 VLSI DECIMATION.jpg",
+    poster: "/visuals/STI 2025 VLSI DECIMATION.webp",
   },
 ];
 
