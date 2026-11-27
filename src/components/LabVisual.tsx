@@ -25,11 +25,15 @@ const visuals = {
 
 export function LabVisual({
   kind,
+  src,
+  alt,
   className = "",
   showBadge = false,
   eager = false,
 }: {
   kind: keyof typeof visuals;
+  src?: string;
+  alt?: string;
   className?: string;
   showBadge?: boolean;
   eager?: boolean;
@@ -38,8 +42,8 @@ export function LabVisual({
   return (
     <div className={`lab-visual ${className}`}>
       <Image
-        src={visual.src}
-        alt={visual.alt}
+        src={src ?? visual.src}
+        alt={alt ?? visual.alt}
         width={1200}
         height={675}
         loading={eager ? "eager" : undefined}

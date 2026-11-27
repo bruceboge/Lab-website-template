@@ -1,15 +1,17 @@
 import Link from "@/components/next-link";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { PROJECTS_DATA } from "@/data/projects";
 import { EVENTS_DATA } from "@/data/events";
 import { LabVisual } from "@/components/LabVisual";
+import { HeroCircuitBackground } from "@/components/HeroCircuitBackground";
 
 const siteDescription =
   "DICEL is the integrated circuit engineering lab at Dedan Kimathi University of Technology in Nyeri, Kenya.";
 
 const proofStats = [
   { value: "5", label: "IC Courses", detail: "Academic pathways" },
-  { value: "18+", label: "Hardware Units", detail: "Lab inventory" },
-  { value: "6", label: "Active Projects", detail: "Research & design" },
+  { value: "18+", label: "Hardware Units", detail: "Origin Labs inventory" },
+  { value: "6", label: "Active Projects", detail: "Silicon & FPGA research" },
   { value: "2022", label: "Established", detail: "DeKUT · Nyeri" },
 ];
 
@@ -17,19 +19,19 @@ const destinations = [
   {
     number: "01",
     title: "Research & Projects",
-    description: "Explore the lab's integrated-circuit and electronic-systems work.",
+    description: "Explore the lab's integrated-circuit, analog front-end, and FPGA work.",
     href: "/projects",
   },
   {
     number: "02",
     title: "Courses & Resources",
-    description: "Find learning materials, equipment information, and design guides.",
+    description: "Find VLSI syllabi, open-source EDA guides, and hardware equipment catalogs.",
     href: "/resources",
   },
   {
     number: "03",
     title: "About the Lab",
-    description: "Learn about the lab, its people, facilities, and how to get in touch.",
+    description: "Meet our researchers, inspect Origin Labs facilities, and connect with the team.",
     href: "/about",
   },
 ];
@@ -60,38 +62,44 @@ export default function Home() {
       />
 
       <section className="home-hero">
+        <HeroCircuitBackground />
         <div className="container home-hero-grid">
           <div className="home-hero-copy">
-            <span className="eyebrow">DeKUT · Integrated Circuit Engineering Lab</span>
+            <span className="hero-kicker">Dedan Kimathi University of Technology · Nyeri</span>
             <h1>Integrated circuit engineering at DeKUT.</h1>
             <p>
-              The lab brings together electronics research, design practice, and learning in integrated circuits and electronic systems.
+              The lab brings together semiconductor research, open-source EDA practice, and hands-on learning in integrated circuits and electronic systems.
             </p>
             <div className="actions">
               <Link className="button" href="/projects">
-                Explore research <span aria-hidden="true">→</span>
+                <span>Explore research</span>
+                <ArrowRight size={16} aria-hidden="true" />
               </Link>
               <Link className="button button-secondary" href="/resources">
-                Browse resources <span aria-hidden="true">→</span>
+                <span>Browse resources</span>
               </Link>
             </div>
           </div>
+
           <div className="home-hero-art">
             <LabVisual kind="digital" showBadge={false} eager />
           </div>
         </div>
       </section>
 
-      {/* Proof strip */}
-      <section className="container" aria-label="Lab statistics">
-        <div className="proof-strip">
-          {proofStats.map((stat) => (
-            <div className="proof-item" key={stat.label}>
-              <strong>{stat.value}</strong>
-              <span>{stat.label}</span>
-              <small>{stat.detail}</small>
-            </div>
-          ))}
+      <section className="proof-band" aria-label="Lab statistics">
+        <div className="container">
+          <div className="proof-strip">
+            {proofStats.map((stat) => (
+              <div className="proof-item" key={stat.label}>
+                <strong className="tabular-nums">{stat.value}</strong>
+                <div>
+                  <span>{stat.label}</span>
+                  <small>{stat.detail}</small>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -99,10 +107,11 @@ export default function Home() {
         <div className="container">
           <div className="home-explore-heading">
             <div>
+              <span className="section-kicker">Laboratory Directory</span>
               <h2 id="home-explore-title">Explore the lab</h2>
             </div>
             <p>
-              Find research, learning materials, and information about the lab.
+              Find active silicon research, academic course pathways, and laboratory facility details.
             </p>
           </div>
           <div className="home-explore-grid">
@@ -112,11 +121,11 @@ export default function Home() {
                 href={destination.href}
                 key={destination.href}
               >
-                <span className="home-explore-number">{destination.number}</span>
+                <span className="home-explore-number tabular-nums">{destination.number}</span>
                 <h3>{destination.title}</h3>
                 <p>{destination.description}</p>
                 <span className="home-explore-arrow" aria-hidden="true">
-                  ↗
+                  <ArrowUpRight size={18} />
                 </span>
               </Link>
             ))}
@@ -124,35 +133,46 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section projects-band">
         <div className="container">
           <div className="editorial-heading">
             <div>
+              <span className="section-kicker">Research & Silicon</span>
               <h2>Selected projects</h2>
             </div>
             <Link className="button button-small button-outline-green" href="/projects">
-              All projects <span aria-hidden="true">→</span>
+              <span>All projects</span>
+              <ArrowRight size={15} aria-hidden="true" />
             </Link>
           </div>
 
-          <div className="grid-3">
+          <div className="projects-showcase-grid">
             {featuredProjects.map((p) => (
-              <Link className="card image-card project-card" href={`/projects/${p.slug}`} key={p.slug}>
+              <Link className="project-showcase-card" href={`/projects/${p.slug}`} key={p.slug}>
                 <LabVisual kind={p.visualKind} showBadge={false} />
-                <div className="project-card-copy">
-                  <div className="project-card-meta">
-                    <span className="tag">{p.type}</span>
-                    <span className="project-card-status">{p.status}</span>
+                <div className="project-showcase-body">
+                  <div className="project-showcase-top">
+                    <div className="project-meta-line">
+                      <span>{p.type}</span>
+                      <span aria-hidden="true">·</span>
+                      <span>{p.status}</span>
+                      <span aria-hidden="true">·</span>
+                      <span className="tabular-nums">{p.year}</span>
+                    </div>
+                    {p.specs[0] && (
+                      <p className="project-spec-line">
+                        {p.specs[0].label}: {p.specs[0].value}
+                      </p>
+                    )}
                   </div>
                   <h3>{p.title}</h3>
-                  <p>{p.summary}</p>
-                  <p className="project-card-spec">{p.specs[0]?.label}: {p.specs[0]?.value}</p>
-                  <div className="project-card-tools" aria-label="Tools used">
-                    {p.toolsUsed.slice(0, 2).map((tool) => <span key={tool}>{tool}</span>)}
+                  <p className="project-summary">{p.summary}</p>
+                  <div className="project-card-foot">
+                    <span>{p.toolsUsed.slice(0, 3).join(" · ")}</span>
+                    <span className="project-foot-cta">
+                      Details <ArrowUpRight size={14} aria-hidden="true" />
+                    </span>
                   </div>
-                  <span className="card-foot">
-                    <b>Project details ↗</b>
-                  </span>
                 </div>
               </Link>
             ))}
@@ -165,20 +185,29 @@ export default function Home() {
           <div className="container">
             <div className="editorial-heading">
               <div>
+                <span className="section-kicker">Calendar & Seminars</span>
                 <h2>Upcoming at the lab</h2>
               </div>
               <Link className="button button-small button-outline-green" href="/events">
-                All events <span aria-hidden="true">→</span>
+                <span>All events</span>
+                <ArrowRight size={15} aria-hidden="true" />
               </Link>
             </div>
 
             <div className="grid-2">
               {upcomingEvents.map((event) => (
-                <Link className="card home-event-card" href={`/events/${event.slug}`} key={event.slug}>
-                  <span className="eyebrow">{event.kind} · {event.date}</span>
+                <Link className="home-event-card" href={`/events/${event.slug}`} key={event.slug}>
+                  <div className="home-event-meta">
+                    <span>{event.kind}</span>
+                    <span aria-hidden="true">·</span>
+                    <span>{event.date}</span>
+                  </div>
                   <h3>{event.title}</h3>
                   <p>{event.summary}</p>
-                  <span className="home-event-link">Event details <span aria-hidden="true">→</span></span>
+                  <span className="home-event-link">
+                    <span>Event details</span>
+                    <ArrowRight size={15} aria-hidden="true" />
+                  </span>
                 </Link>
               ))}
             </div>
@@ -189,17 +218,19 @@ export default function Home() {
       <section className="section lab-cta">
         <div className="container lab-cta-inner">
           <div>
+            <span className="section-kicker">Collaborate & Learn</span>
             <h2>Learn more about the lab</h2>
             <p>
-              For information about research, learning opportunities, or collaboration, contact the lab.
+              For information about research, student training, or institutional partnerships, contact the laboratory team.
             </p>
           </div>
           <div className="actions">
-            <Link className="button button-gold" href="/contact">
-              Contact the lab <span aria-hidden="true">→</span>
+            <Link className="button" href="/contact">
+              <span>Contact the lab</span>
+              <ArrowRight size={16} aria-hidden="true" />
             </Link>
-            <Link className="button button-outline-light" href="/resources/courses">
-              Courses & learning
+            <Link className="button button-secondary" href="/resources/courses">
+              <span>Courses & learning</span>
             </Link>
           </div>
         </div>

@@ -9,68 +9,94 @@ export const metadata = {
 
 const galleryItems: {
   kind: "laboratory" | "layout" | "analog" | "digital";
+  src: string;
+  alt: string;
   title: string;
   category: string;
 }[] = [
   {
     kind: "laboratory",
-    title: "Origin Labs Electronics Workbenches",
+    src: "/visuals/ORIGIN LAB BANNER.jpg",
+    alt: "Origin Labs and DICEL hardware engineering entrance banner at DeKUT",
+    title: "Origin Labs & DICEL Facility",
     category: "Hardware Facility",
   },
   {
     kind: "layout",
-    title: "Submicron Physical Layout & GDSII Flow",
-    category: "Physical Design",
+    src: "/visuals/DICEL ENTRANCE VIEW.jpg",
+    alt: "Research posters and work area inside the DICEL workspace",
+    title: "DICEL Laboratory Entrance & Poster Wall",
+    category: "Research Showcase",
   },
   {
     kind: "digital",
-    title: "Digital Logic & FPGA Emulation Workstations",
+    src: "/visuals/DICEL ENTRANCE VIEW2.jpg",
+    alt: "Research posters displayed inside the DICEL workspace",
+    title: "Silicon & VLSI Research Gallery",
     category: "Digital VLSI",
   },
   {
     kind: "analog",
-    title: "Analog Front-End & Biopotential Testbeds",
-    category: "Analog & Mixed-Signal",
-  },
-  {
-    kind: "layout",
-    title: "Memory Array & SRAM Bitcell Characterization",
-    category: "Silicon Research",
-  },
-  {
-    kind: "laboratory",
-    title: "Micro-Soldering & Hardware Assembly Station",
-    category: "Prototyping",
-  },
-  {
-    kind: "digital",
-    title: "Open-Source Silicon Verification",
-    category: "Digital VLSI",
-  },
-  {
-    kind: "analog",
-    title: "Precision Sensor Interfaces",
+    src: "/visuals/OFFICE 1.jpg",
+    alt: "Interior workspace at the DeKUT Integrated Circuit Engineering Lab",
+    title: "DICEL Design Studio & Workstations",
     category: "Analog & Mixed-Signal",
   },
   {
     kind: "laboratory",
-    title: "Measurement & Bring-Up Bench",
+    src: "/visuals/OFFICE 2.jpg",
+    alt: "Equipment and workstations inside the DeKUT laboratory",
+    title: "Measurement & Bench Bring-Up Station",
     category: "Hardware Facility",
   },
   {
+    kind: "laboratory",
+    src: "/visuals/ENTRANCE.jpg",
+    alt: "Main entrance to the DICEL integrated circuit engineering laboratory",
+    title: "DeKUT IC Engineering Lab Entrance",
+    category: "Campus Lab",
+  },
+  {
     kind: "layout",
-    title: "Standard-Cell Physical Design",
-    category: "Physical Design",
+    src: "/visuals/ORIGIN BANNER HALF.jpg",
+    alt: "Origin Labs branding panel at Dedan Kimathi University of Technology",
+    title: "Origin Labs Engineering Wing",
+    category: "Hardware Facility",
   },
   {
     kind: "digital",
-    title: "RISC-V Hardware Prototyping",
-    category: "Embedded Systems",
+    src: "/visuals/STI 15 MHZ FREQUENCY SYNTHESIZER.jpg",
+    alt: "STI conference poster for a 15 MHz digital phase-locked loop in 130nm CMOS",
+    title: "15 MHz Frequency Synthesizer DPLL",
+    category: "STI&E 2025 Conference",
   },
   {
     kind: "analog",
-    title: "Mixed-Signal Research Workflows",
-    category: "Silicon Research",
+    src: "/visuals/STI 2025 LOW POWER SIGMA.jpg",
+    alt: "STI conference poster for a low-power sigma-delta modulator for hearing aids",
+    title: "Low-Power Sigma-Delta Modulator",
+    category: "STI&E 2025 Conference",
+  },
+  {
+    kind: "analog",
+    src: "/visuals/STI 2025 LOW VOLTAGE CMOS.jpg",
+    alt: "STI conference poster for a low-voltage CMOS low-noise amplifier",
+    title: "Low-Voltage CMOS LNA for IoT",
+    category: "STI&E 2025 Conference",
+  },
+  {
+    kind: "digital",
+    src: "/visuals/STI 2025 VLSI DECIMATION.jpg",
+    alt: "STI conference poster for a VLSI decimation filter for audio applications",
+    title: "VLSI Decimation Filter Architecture",
+    category: "STI&E 2025 Conference",
+  },
+  {
+    kind: "laboratory",
+    src: "/visuals/STI 2025 MEDICAL.jpg",
+    alt: "STI conference poster for a low-cost RFID medical equipment tracking system",
+    title: "RFID Medical Equipment Tracking",
+    category: "STI&E 2025 Conference",
   },
 ];
 
@@ -110,7 +136,7 @@ export default function GalleryPage() {
           <div className="gallery-grid">
             {galleryItems.map((item) => (
               <figure key={item.title} className="gallery-card">
-                <LabVisual kind={item.kind} showBadge={false} />
+                <LabVisual kind={item.kind} src={item.src} alt={item.alt} showBadge={false} />
                 <figcaption className="gallery-card-copy">
                   <div>
                     <span className="gallery-card-category">{item.category}</span>

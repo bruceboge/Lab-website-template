@@ -1,5 +1,6 @@
 import Link from "@/components/next-link";
 import LabBrand from "@/components/LabBrand";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function SiteFooter() {
   return (
@@ -39,11 +40,13 @@ export default function SiteFooter() {
           </a>
           <span>© 2026 DICEL · All rights reserved</span>
         </div>
-        <div
-          className="social-icons"
-          role="group"
-          aria-label="Institutional links"
-        >
+        <div className="footer-controls">
+          <ThemeToggle />
+          <div
+            className="social-icons"
+            role="group"
+            aria-label="Institutional links"
+          >
             <a
               href="https://www.linkedin.com/school/dedan-kimathi-university-of-technology/"
               target="_blank"
@@ -82,8 +85,9 @@ export default function SiteFooter() {
                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
               </svg>
             </a>
+          </div>
+          <a className="back-to-top" href="#top" aria-label="Back to top">↑</a>
         </div>
-        <a className="back-to-top" href="#top" aria-label="Back to top">↑</a>
       </div>
     </footer>
   );
