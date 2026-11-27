@@ -5,7 +5,9 @@ const resourceLinks = [
   { label: "All resources", href: "/resources" },
   { label: "Publications", href: "/resources/publications" },
   { label: "Courses", href: "/resources/courses" },
+  { label: "IC Design Process", href: "/resources/courses/ic-design-process" },
   { label: "Inventory", href: "/resources/inventory" },
+  { label: "Tools", href: "/resources/tools" },
 ];
 
 const aboutLinks = [
@@ -20,6 +22,13 @@ const linksAfterResources = [
   { label: "Support Us", href: "/support" },
 ];
 
+const mobileLinks = [
+  { label: "Home", href: "/" },
+  ...aboutLinks,
+  ...resourceLinks,
+  ...linksAfterResources,
+];
+
 export default function PrimaryNavigation({
   mobile = false,
   id,
@@ -29,10 +38,30 @@ export default function PrimaryNavigation({
   id?: string;
   hidden?: boolean;
 }) {
+  if (mobile) {
+    return (
+      <nav
+        aria-label="Main navigation"
+        className="mobile-nav-links"
+        id={id}
+        hidden={hidden}
+      >
+        {mobileLinks.map((item) => (
+          <Link href={item.href} key={item.href}>
+            {item.label}
+          </Link>
+        ))}
+        <Link className="button mobile-contact-link" href="/contact">
+          Contact Us
+        </Link>
+      </nav>
+    );
+  }
+
   return (
     <nav
       aria-label="Main navigation"
-      className={mobile ? "mobile-nav-links" : "desktop-nav"}
+      className="desktop-nav"
       id={id}
       hidden={hidden}
     >
@@ -40,13 +69,13 @@ export default function PrimaryNavigation({
       <NavigationDropdown
         label="About"
         links={aboutLinks}
-        id={mobile ? "about-menu-mobile" : "about-menu-desktop"}
+        id="about-menu-desktop"
         className="nav-dropdown--about"
       />
       <NavigationDropdown
         label="Resources"
         links={resourceLinks}
-        id={mobile ? "resources-menu-mobile" : "resources-menu-desktop"}
+        id="resources-menu-desktop"
         className="nav-dropdown--resources"
       />
       {linksAfterResources.map((item) => (
@@ -55,11 +84,11 @@ export default function PrimaryNavigation({
         </Link>
       ))}
       <Link
-        className={mobile ? "button mobile-contact-link" : "button button-small"}
+        className="button button-small"
         href="/contact"
-        aria-label={mobile ? undefined : "Contact the lab"}
+        aria-label="Contact the lab"
       >
-        {mobile ? "Contact the lab" : "Contact"}
+        Contact Us
       </Link>
     </nav>
   );

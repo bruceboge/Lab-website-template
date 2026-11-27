@@ -5717,4 +5717,25 @@ html:root[data-theme] body *::after {
   border-radius: 0 !important;
 }
 
+@media (max-width: 850px) {
+  .mobile-nav-links {
+    display: flex;
+  }
+
+  .mobile-nav nav:not([hidden]) {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .mobile-nav-links > a:not(.button),
+  .mobile-nav-links > .mobile-contact-link {
+    flex: 0 0 auto;
+  }
+
+  .mobile-nav-links > .mobile-contact-link {
+    width: 100%;
+    margin-top: 14px;
+  }
+}
+
 
