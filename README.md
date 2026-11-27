@@ -5,7 +5,7 @@ The DICEL website is built with Next.js App Router.
 ## Development
 
 ```sh
-npm install
+npm ci
 npm run dev
 ```
 
@@ -25,3 +25,5 @@ npm start
 - `src/components/` — shared header, footer, navigation, search, and visual components.
 - `src/data/` — projects, events, and inventory content.
 - `src/styles.css` — shared hand-written website styles.
+
+Use npm as the package manager; `package-lock.json` is the authoritative dependency lockfile.

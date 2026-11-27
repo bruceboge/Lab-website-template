@@ -1,4 +1,3 @@
-import Link from "@/components/next-link";
 import LabBrand from "@/components/LabBrand";
 import MobileNavigation from "@/components/MobileNavigation";
 import PrimaryNavigation from "@/components/PrimaryNavigation";

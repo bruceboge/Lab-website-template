@@ -1,5 +1,5 @@
 import Link from "@/components/next-link";
-import Image from "@/components/next-image";
+import Image from "next/image";
 
 export const metadata = {
   title: "Publications & Research Reports",

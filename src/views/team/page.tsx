@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Research Team & Faculty",
   description:
@@ -99,7 +101,13 @@ export default function TeamPage() {
                 <div className="team-media">
                   <div className="team-avatar">
                     {person.image ? (
-                      <img src={person.image} alt={`Portrait of ${person.name}`} />
+                      <Image
+                        src={person.image}
+                        alt={`Portrait of ${person.name}`}
+                        fill
+                        sizes="(max-width: 760px) 50vw, 25vw"
+                        unoptimized
+                      />
                     ) : (
                       <span className="avatar-monogram" aria-hidden="true">
                         {person.initials}

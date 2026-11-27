@@ -1,16 +1,11 @@
 import NextLink from "next/link";
-import { forwardRef, type AnchorHTMLAttributes } from "react";
+import { forwardRef, type ComponentProps } from "react";
 
-type Props = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> & {
-  href: string;
-  prefetch?: boolean;
-  scroll?: boolean;
-  replace?: boolean;
-};
+type Props = Omit<ComponentProps<typeof NextLink>, "href"> & { href: string };
 
 /** Link accepting plain href strings (internal paths, #hash, external, mailto). */
 const Link = forwardRef<HTMLAnchorElement, Props>(function Link(
-  { href, prefetch: _p, scroll: _s, replace, ...rest },
+  { href, prefetch, scroll, replace, ...rest },
   ref,
 ) {
   if (!href.startsWith("/") || href.startsWith("//")) {
@@ -22,8 +17,10 @@ const Link = forwardRef<HTMLAnchorElement, Props>(function Link(
     <NextLink
       ref={ref}
       href={`${path || "/"}${search ? `?${search}` : ""}${hash ? `#${hash}` : ""}`}
-      {...(replace ? { replace } : {})}
-      {...(rest as Record<string, unknown>)}
+      {...(prefetch === undefined ? {} : { prefetch })}
+      {...(scroll === undefined ? {} : { scroll })}
+      {...(replace === undefined ? {} : { replace })}
+      {...rest}
     />
   );
 });

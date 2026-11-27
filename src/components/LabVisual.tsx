@@ -1,4 +1,4 @@
-import Image from "@/components/next-image";
+import Image from "next/image";
 
 const visuals = {
   digital: {
